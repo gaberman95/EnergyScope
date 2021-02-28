@@ -1,10 +1,10 @@
-.. Energy Scope (GGM) documentation master file, created by
-   sphinx-quickstart on Sun Feb 28 18:13:42 2021.
+.. EnergyScope GGM documentation master file, created by
+   sphinx-quickstart on Sun Feb 28 18:37:21 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Energy Scope (GGM)'s documentation!
-==============================================
+Welcome to EnergyScope GGM's documentation!
+===========================================
 
 .. toctree::
    :maxdepth: 2

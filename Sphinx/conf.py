@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Energy Scope (GGM)'
+project = 'EnergyScope GGM'
 copyright = '2021, Gabriel Guerra'
 author = 'Gabriel Guerra'
 
