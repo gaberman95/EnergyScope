@@ -14,7 +14,7 @@ example, in the case of decentralized heat production with a natural gas (NG) bo
 The input for the proposed modelling framework is the EUD in energy services, represented as the sum of three components: electricity, heating and mobility; this replaces the classical sector-based representation of energy demand. Heat is divided in three end-use types (EUTs): high temperature heat for industry demand, low temperature for space heating and low temperature for hot water. Mobility is divided in two EUTs: passenger mobility and freight.
 A simplified conceptual example of the proposed energy system structure is proposed in Figure 1.
 
-.. image:: images/ES illustration.pdf
+.. image:: images/ES illustration.PNG
 
 Figure 1: Conceptual example of an energy system with 3 resources, 8 technologies (of which 2 storage and 1 infrastructure) and 4 end use demand (of which 1 losses). Abbreviations: pumped hydro storage (PHS), electrical heat pump (eHP), combined heat and power (CHP), compressed natural gas (CNG). Some icons are form [3]_.
 
@@ -22,7 +22,7 @@ The system is separated in three parts: resources, energy conversion and demand.
 
 As an illustrative example of the concept of *layer*, Figure 2 gives a perspective of the electricity layer which is the most complex one, since the electrification of other sectors is foreseen as a key of the energy transition [4]_. In the proposed version, 38 technologies are related to the electricity layer. 13 technologies produce exclusively electricity, such as natural gas combined cycle (CCGT), photovoltaic (PV) or wind. 10 combined heat and power (CHP) produce heat and electricity, such as industrial waste CHP. 1 infrastructure represents the grid. 5 storage technologies are implemented, such as PHS, hydro dams, batteries or vehicle-to-grid (V2G). The rest are consumers regrouped in the electrification of heat and mobility. Electrification of the heating sector is supported by direct electric heating but also by the more expensive but more efficient electrical heat pumps for low temperature heat demand. All the data for technologies and resources are reported in detail in Appendix 2. Electrification of mobility is achieved via electric public transportation (train, trolley, metro and electrical/hybrid buses), electric private transportation with the promising vehicle-to-grid (V2G) and hydrogen cars2 and trains for freight.
 
-.. image:: images/Layer_Elec.pdf
+.. image:: images/Layer_Elec.PNG
 
 Figure 2: Representation of the Elec layer with all the technologies implemented in EnergyScope TDs. **_Bold Italic technologies_** represent a group of different technologies. Refer to Figure 6 of the main paper for color legend. Abbreviations: photovoltaic (PV), gas to power (GtP), integrated gasification natural gas combined cycle (IGCC), carbon capture and storage (CCS), natural gas combined cycle (CCGT), combined heat and power (CHP), heat pump (HP), pumped hydro storage (PHS), vehicle-to-grid (V2G), power to gas (PtG), end-use demand (EUD).
 
@@ -30,6 +30,6 @@ Figure 2: Representation of the Elec layer with all the technologies implemented
 
 References
 ----------
-.. [1] T. Hurlimann. \LPL: A mathematical programming language". In: OR Spektrum 15.1  (1993), pp. 43{55. issn: 01716468. doi: 10.1007/BF01783416. url: https://doi.org/10.1007/BF01783416
+.. [1] T. Hurlimann.\LPL: A mathematical programming language". In: OR Spektrum 15.1 (1993), pp. 43{55. issn: 01716468. doi: 10.1007/BF01783416. url: https://doi.org/10.1007/BF01783416
 .. [2] European Commission - Eurostat. Glossary: Final Energy Consumption. (Visited on 12/14/2018).
 .. [3] Freepik. url: www.flaticon.com
