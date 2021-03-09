@@ -132,6 +132,8 @@ Contents
 .. toctree::
    :maxdepth: 1
    
+   introduction
+   LP
    workflow
 
 
