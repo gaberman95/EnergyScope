@@ -14,7 +14,7 @@ example, in the case of decentralized heat production with a natural gas (NG) bo
 The input for the proposed modelling framework is the EUD in energy services, represented as the sum of three components: electricity, heating and mobility; this replaces the classical sector-based representation of energy demand. Heat is divided in three end-use types (EUTs): high temperature heat for industry demand, low temperature for space heating and low temperature for hot water. Mobility is divided in two EUTs: passenger mobility and freight.
 A simplified conceptual example of the proposed energy system structure is proposed in Figure 1.
 
-.. image:: images/ES illustration.PNG
+.. image:: images/ES_illustration.PNG
 
 Figure 1: Conceptual example of an energy system with 3 resources, 8 technologies (of which 2 storage and 1 infrastructure) and 4 end use demand (of which 1 losses). Abbreviations: pumped hydro storage (PHS), electrical heat pump (eHP), combined heat and power (CHP), compressed natural gas (CNG). Some icons are form [3]_.
 
