@@ -47,4 +47,12 @@ Table 36: Yearly shares of DHN low temperature heat & CHP technologies for the S
 	Boiler Oil	0.6%
 	Deep Geothermal	0.4%
 	================= =======================
+
+
+	+-------------+-------+
+	| technologies|	Units |
+	+=============+=======+
+	|	HP	      |	4.8%  |
+	+-------------+-------+
+
 .. _README.md:
