@@ -109,19 +109,18 @@ Figure 13: Files and folder structure
      - Description
    * - EnergySxope TD
      - READ.md
-       Notice
-       license
+      	Notice license
      - Read me file
-       List of contributions and references
-       License file
+      	List of contributions and references
+      	License file
    * - Data
      - DATA.xlsx
-       STEP_1_in.xlsx
-       STEP_1_out.xlsx
-       STEP_2_in.xlsx
+      	STEP_1_in.xlsx
+      	STEP_1_out.xlsx
+      	STEP_2_in.xlsx
      - All the input data
-       Prepare data for step 1
-       Process data from step 1
-       Prepare data for step 2
-   
+      	Prepare data for step 1
+      	Process data from step 1
+      	Prepare data for step 2
+
 .. _README.md:
