@@ -12,9 +12,28 @@ Tables 1 and 2 list and describe the model parameters. Tables 3 and 4 list and d
 
 Figure 3: Visual representation of the sets and indices of the LP framework. Abbreviations: space heating (SH), hot water (HW), temperature (T), mobility (MOB), vehicle-to-grid (V2G), thermal storage (TS).
 
+Table 1: Time series parameter list with description. Set indices as in Figure 3
+
+.. table::Time series parameter list with description 
+    =============== =========== ===============================
+	**Parameter**	**Units**	**Description**
+	=============== =========== ===============================
+	%elec(h,td)		[-]		Yearly time series (adding up to 1) of electricity end-uses
+	%sh(h,td)	[-]	Yearly time series (adding up to 1) of SH end-uses
+	%pass(h,td)	[-]	Yearly time series (adding up to 1) of passenger mobility end-uses
+	%fr(h,td)	[-]	Yearly time series (adding up to 1) of freight mobility end-uses
+	cp,t(tech,h,td)	[-]	Period capacity factor (default 1)
+	=============== =========== ===============================
+
 Table 2: Scenario parameter list with description. Set indices as in Figure 3
 
-.. table:: 
- 	================= ================ ================================= 
- 	**Parameter**		**Units** 		**Description**================= ================ ================================= 	
+.. table::Scenario parameter list with description 
+    =============== =========== ===============================
+	**Parameter**			**Units**	**Description**
+	=============== =========== ===============================
+	
+	
+	=============== =========== ===============================
+
+
  
