@@ -44,6 +44,7 @@ By ensuring that the download files respect the structure, the links between fil
    
 
 
+
 .. list-table:: Table 36: Yearly shares of DHN low temperature heat & CHP technologies for the Swiss energy system in 2011.
    :widths: 25 15
    :header-rows: 1
@@ -68,4 +69,59 @@ By ensuring that the download files respect the structure, the links between fil
      - 0.4%
    
 
+
+
+.. list-table:: Table 37: Yearly shares of industrial high temperature heat & CHP technologies for the Swiss energy system in 2011
+   :widths: 25 15
+   :header-rows: 1
+
+   * - Technologies
+     - Share heat[%]
+   * - CHP NG
+     - 2.4%
+   * - CHP Wood
+     - 0.8%
+   * - CHP Waste
+     - 1.8%
+   * - Boiler NG
+     - 24.3%
+   * - Boiler Wood
+     - 7.0%
+   * - Boiler Oil
+     - 25.6%
+   * - Boiler Coal
+     - 5.1%
+   * - Boiler Waste
+     - 5.6%
+   * - Direct Elec.
+     - 27.5%
+   
+
+.. image:: images/structure.PNG
+Figure 13: Files and folder structure
+
+.. list-table:: Table 38: Description of the files in Figure 13.
+   :widths: 20 20 35
+   :header-rows: 1
+
+   * - Folder
+     - File name
+     - Description
+   * - EnergySxope TD
+     - READ.md
+       Notice
+       license
+     - Read me file
+       List of contributions and references
+       License file
+   * - Data
+     - DATA.xlsx
+       STEP_1_in.xlsx
+       STEP_1_out.xlsx
+       STEP_2_in.xlsx
+     - All the input data
+       Prepare data for step 1
+       Process data from step 1
+       Prepare data for step 2
+   
 .. _README.md:
