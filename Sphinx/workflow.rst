@@ -30,7 +30,7 @@ Table 35: Yearly shares of decentralized low temperature heat & CHP technologies
 	Boiler Oil	49.8%
 	Solar Th.	0.5%
 	Direct Elec.	9.2%
-	=============== ==============
+	=============== =======================
 
 
 .. _README.md:
