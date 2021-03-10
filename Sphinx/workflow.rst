@@ -101,24 +101,24 @@ By ensuring that the download files respect the structure, the links between fil
 Figure 13: Files and folder structure
 
 .. list-table:: Table 38: Description of the files in Figure 13.
-   :widths: 20 20 35
+   :widths: 25 25 45
    :header-rows: 1
 
    * - Folder
      - File name
      - Description
-   * - EnergySxope TD
-     - READ.md
+   * - EnergyScope TD
+     - 	READ.md
       	Notice license
-     - Read me file
+     - 	Read me file
       	List of contributions and references
       	License file
    * - Data
-     - DATA.xlsx
+     - 	DATA.xlsx
       	STEP_1_in.xlsx
       	STEP_1_out.xlsx
       	STEP_2_in.xlsx
-     - All the input data
+     - 	All the input data
       	Prepare data for step 1
       	Process data from step 1
       	Prepare data for step 2
