@@ -16,9 +16,9 @@ Table 35: Yearly shares of decentralized low temperature heat & CHP technologies
 
 
 
-	================= =======================
-		**Technologies**	**Share heat[%]**	
-	================= =======================
+	================    =================
+	**Technologies**	**Share heat[%]**	
+	================    =================
 	HP		6.0%
 	Thermal HP	0.0%
 	CHP NG		0.5%
@@ -30,13 +30,13 @@ Table 35: Yearly shares of decentralized low temperature heat & CHP technologies
 	Boiler Oil	49.8%
 	Solar Th.	0.5%
 	Direct Elec.	9.2%
-	================= =======================
+	================    =================
 
 Table 36: Yearly shares of DHN low temperature heat & CHP technologies for the Swiss energy system in 2011.
 
 
 	================= =======================
-		**Technologies**	**Share heat[%]**	
+	**Technologies**	**Share heat[%]**	
 	================= =======================
 	HP		4.8%
 	CHP NG		1.2%
