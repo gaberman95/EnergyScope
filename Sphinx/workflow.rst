@@ -15,7 +15,8 @@ By ensuring that the download files respect the structure, the links between fil
 Table 35: Yearly shares of decentralized low temperature heat & CHP technologies for the Swiss energy system in 2011.
 
 .. table::Yearly shares of decentralized low temperature heat & CHP technologies for the Swiss energy system in 2011.
-    =============== ==============
+
+	=============== ==============
 					**Share heat[%]**	
 	=============== ==============
 	HP					6.0%
