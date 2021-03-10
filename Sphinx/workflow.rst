@@ -14,22 +14,22 @@ By ensuring that the download files respect the structure, the links between fil
 
 Table 35: Yearly shares of decentralized low temperature heat & CHP technologies for the Swiss energy system in 2011.
 
-.. table::Yearly shares of decentralized low temperature heat & CHP technologies for the Swiss energy system in 2011.
+
 
 	=============== ==============
-					**Share heat[%]**	
+		**Share heat[%]**	
 	=============== ==============
-	HP					6.0%
-	Thermal HP			0.0%
-	CHP NG				0.5%
-	CHP Oil				0.1%
-	FC NG				0.0%
-	FC H2				0.0%
-	Boiler NG			25.7%
-	Boiler Wood			8.2%
-	Boiler Oil			49.8%
-	Solar Th.			0.5%
-	Direct Elec.		9.2%
+	HP	6.0%
+	Thermal HP	0.0%
+	CHP NG	0.5%
+	CHP Oil	0.1%
+	FC NG	0.0%
+	FC H2	0.0%
+	Boiler NG	25.7%
+	Boiler Wood		8.2%
+	Boiler Oil	49.8%
+	Solar Th.	0.5%
+	Direct Elec.	9.2%
 	=============== ==============
 
 
