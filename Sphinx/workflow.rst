@@ -13,7 +13,7 @@ EnergyScope Typical Days (EnergyScope TD) is structured as shown in Figure 13. A
 By ensuring that the download files respect the structure, the links between files should be respected and User could use the quick start procedure to launch the code.
 
 
-.. list-table::Table 35: Yearly shares of decentralized low temperature heat & CHP technologies for the Swiss energy system in 2011.
+.. list-table:: Table 35: Yearly shares of decentralized low temperature heat & CHP technologies for the Swiss energy system in 2011.
    :widths: 25 15
    :header-rows: 1
 
@@ -44,7 +44,7 @@ By ensuring that the download files respect the structure, the links between fil
    
 
 
-.. list-table::Table 36: Yearly shares of DHN low temperature heat & CHP technologies for the Swiss energy system in 2011.
+.. list-table:: Table 36: Yearly shares of DHN low temperature heat & CHP technologies for the Swiss energy system in 2011.
    :widths: 25 15
    :header-rows: 1
 
