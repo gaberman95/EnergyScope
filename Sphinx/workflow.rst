@@ -16,9 +16,9 @@ Table 35: Yearly shares of decentralized low temperature heat & CHP technologies
 
 
 
-	=============== ==============
+	=============== =======================
 			**Share heat[%]**	
-	=============== ==============
+	=============== =======================
 	HP		6.0%
 	Thermal HP	0.0%
 	CHP NG		0.5%
