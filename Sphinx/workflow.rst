@@ -32,5 +32,19 @@ Table 35: Yearly shares of decentralized low temperature heat & CHP technologies
 	Direct Elec.	9.2%
 	================= =======================
 
+Table 36: Yearly shares of DHN low temperature heat & CHP technologies for the Swiss energy system in 2011.
 
+
+	================= =======================
+	**Technologies**	**Share heat[%]**	
+	================= =======================
+	HP		4.8%
+	CHP NG		1.2%
+	CHP Wood		6.6%
+	CHP Waste	72.5%
+	Boiler NG	13.8%
+	Boiler Wood		0.0%
+	Boiler Oil	0.6%
+	Deep Geothermal	0.4%
+	================= =======================
 .. _README.md:
