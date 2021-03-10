@@ -108,20 +108,20 @@ Figure 13: Files and folder structure
      - File name
      - Description
    * - EnergyScope TD
-     - "/"
+     -  
      	READ.md
       	Notice license
-     - "/"
+     -  
      	Read me file
       	List of contributions and references
       	License file
    * - Data
-     - "/"
+     -  
      	DATA.xlsx
       	STEP_1_in.xlsx
       	STEP_1_out.xlsx
       	STEP_2_in.xlsx
-     - "/"
+     -  
      	All the input data
       	Prepare data for step 1
       	Process data from step 1
