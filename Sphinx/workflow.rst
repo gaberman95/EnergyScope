@@ -12,10 +12,8 @@ Files structure and download
 EnergyScope Typical Days (EnergyScope TD) is structured as shown in Figure 13. A main folder contains three sub-folders, first one is dedicated to data management. Second, for the files related to typical days selection (STEP 1). Third and last branch regroups the files related to the energy model (STEP 2). Table 38 describes each files.
 By ensuring that the download files respect the structure, the links between files should be respected and User could use the quick start procedure to launch the code.
 
-Table 35: Yearly shares of decentralized low temperature heat & CHP technologies for the Swiss energy system in 2011.
 
-
-.. list-table:: Frozen Delights!
+.. list-table::Table 35: Yearly shares of decentralized low temperature heat & CHP technologies for the Swiss energy system in 2011.
    :widths: 25 15
    :header-rows: 1
 
@@ -45,5 +43,29 @@ Table 35: Yearly shares of decentralized low temperature heat & CHP technologies
      - 9.2%
    
 
+
+.. list-table::Table 36: Yearly shares of DHN low temperature heat & CHP technologies for the Swiss energy system in 2011.
+   :widths: 25 15
+   :header-rows: 1
+
+   * - Technologies
+     - Share heat[%]
+   * - HP
+     - 4.8%
+   * - CHP NG
+     - 1.2%
+   * - CHP Wood
+     - 6.6%
+   * - CHP Waste
+     - 72.5%
+   * - Boiler NG
+     - 13.8%
+   * - Boiler Wood
+     - 0.0%
+   * - Boiler Oil
+     - 0.6%
+   * - Deep Geothermal
+     - 0.4%
+   
 
 .. _README.md:
