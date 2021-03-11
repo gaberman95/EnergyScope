@@ -141,9 +141,9 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
 
 
 
-a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
-b[GWh] if tech ϵ STO
-c[Mpkm/h] for passenger, [Mtkm/h] for freight mobility end-uses
+* a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
+* b[GWh] if tech ϵ STO
+* c[Mpkm/h] for passenger, [Mtkm/h] for freight mobility end-uses
 
 
 .. list-table:: Table 3: Independent variable list with description. All variables are continuous and nonnegative, unless otherwise indicated.
@@ -188,8 +188,8 @@ c[Mpkm/h] for passenger, [Mtkm/h] for freight mobility end-uses
      - Solar thermal operation in each period
      
 
-a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses 
-b[GWh] if tech ϵ STO
+* a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses 
+* b[GWh] if tech ϵ STO
 
 
 .. list-table:: Table 4: Dependent variable list with description. All variables are continuous and non-negative, unless otherwise indicated.
@@ -228,7 +228,4 @@ b[GWh] if tech ϵ STO
      - Energy stored over the year
 
 
-a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
-
-
-10_{6}
+* a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
