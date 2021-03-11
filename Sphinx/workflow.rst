@@ -17,7 +17,7 @@ By ensuring that the download files respect the structure, the links between fil
    :widths: 25 15
    :header-rows: 1
 
-   * - Technologies
+   * - 
      - Share heat[%]
    * - HP
      - 6.0%
@@ -49,7 +49,7 @@ By ensuring that the download files respect the structure, the links between fil
    :widths: 25 15
    :header-rows: 1
 
-   * - Technologies
+   * - 
      - Share heat[%]
    * - HP
      - 4.8%
@@ -75,7 +75,7 @@ By ensuring that the download files respect the structure, the links between fil
    :widths: 25 15
    :header-rows: 1
 
-   * - Technologies
+   * - 
      - Share heat[%]
    * - CHP NG
      - 2.4%
@@ -108,12 +108,12 @@ Figure 13: Files and folder structure
      - File name
      - Description
    * - EnergyScope TD
-     -  README.md 	
-      	Notice 	
-      	License	
-     -  Read me file 	
-      	List of contributions and references 	
-      	License file 	
+     -  README.md
+      	Notice 
+      	License
+     -  Read me file
+      	List of contributions and references
+      	License file
    * - Data
      -  DATA.xlsx
       	STEP_1_in.xlsx
