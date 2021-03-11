@@ -14,7 +14,7 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
 
 
 .. list-table:: Table 1: Time series parameter list with description. Set indices as in Figure 3
-   :widths: 25 10 50
+   :widths: 25 10 40
    :header-rows: 1
 
    * - Parameter
@@ -137,7 +137,7 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
    * - _cgrid;extra_
      - [MCHF]
      - Cost to reinforce the grid due to IRE penetration
-     
+
 
 a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
 b[GWh] if tech 2 STO
