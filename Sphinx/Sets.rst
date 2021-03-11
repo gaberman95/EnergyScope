@@ -18,8 +18,8 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
    :header-rows: 1
 
    * - Parameter
-   	 - Units
-   	 - Description
+     - Units
+     - Description
    * - %elec(h,td)
      - [-]
      - Yearly time series (adding up to 1) of electricity end-uses
@@ -43,8 +43,8 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
    :header-rows: 1
 
    * - Parameter
-   	 - Units
-   	 - Description
+     - Units
+     - Description
    * - _τ(tech)_
      - [-]
      - Investment cost annualization factor
