@@ -188,7 +188,7 @@ c[Mpkm/h] for passenger, [Mtkm/h] for freight mobility end-uses
      - Solar thermal operation in each period
      
 
-a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
+a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses 
 b[GWh] if tech ϵ STO
 
 
@@ -229,3 +229,6 @@ b[GWh] if tech ϵ STO
 
 
 a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
+
+
+10_{6}
