@@ -39,108 +39,110 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
 
 
 .. list-table:: Table 2: Scenario parameter list with description.
-   :widths: 25 10 50
+   :widths: 25 15 50
    :header-rows: 1
 
    * - Parameter
      - Units
      - Description
-   * - _τ(tech)_
+   * - τ(tech)
      - [-]
      - Investment cost annualization factor
-   * - _irate_
+   * - irate
      - [-]
      - Real discount rate
-   * - _endUsesyear(eui, s)_
+   * - endUsesyear(eui, s)
      - [GWh/y]a
      - Annual end-uses in energy services per sector
-   * - _endUsesInput(eui)_
+   * - endUsesInput(eui)_
      - [GWh/y]a
      - Total annual end-uses in energy services
-   * - _reshare_
+   * - reshare
      - [-]
      - minimum share [0;1] of primary RE
-   * - _gwplimit_
+   * - gwplimit
      - [ktCO2-eq/y]
      - Higher CO2-eq emissions limit
-   * - _%public,min; %public,max_
+   * - %public,min; %public,max
      - [-] 
      - Lower and upper limit to %Public
-   * - _%rail,min; %rail,max_
+   * - %rail,min; %rail,max
      - [-]
      - Lower and upper limit to %Rail
-   * - _%dhn,min; %dhn,max_
+   * - %dhn,min; %dhn,max
      - [-] 
      - Lower and upper limit to %DHN
-   * - _top(h; td)_
+   * - top(h; td)
      - [h]
      - Time periods duration (default 1h)
-   * - _fmin; fmax(tech)_
+   * - fmin; fmax(tech)
      - [GW]ab
      - Min./max. installed size of the technology
-   * - _fmin,% ; fmax,%(tech)_
+   * - fmin,% ; fmax,%(tech)
      - [-]
      - Min./max. relative share of a technology in a layer
-   * - _avail(res)_
+   * - avail(res)
      - [GWh/y]
      - Resource yearly total availability
-   * - _cop(res)_
+   * - cop(res)
      - [MCHF/GWh] 
      - Specific cost of resources
-   * - _ηcar,max_
+   * - ηcar,max
      - [-]
      - Maximum number of cars
-   * - _%Peaksh_ 
+   * - %Peaksh 
      - [-]
      - Ratio peak/max. space heating demand in typical days
-   * - _f(res U tech \ sto,l)_
+   * - f(res U tech \ sto,l)
      - [GW]c 
      - Input from (< 0) or output to (> 0) layers. f(i; j) = 1
-   * - _cinv(tech)_
+   * - cinv(tech)
      - [MCHF/GW]cb
      - Technology specific investment cost
-   * - _cmaint(tech)_
+   * - cmaint(tech)
      - [MCHF/GW/y]cb
      - Technology specific yearly maintenance cost
-   * - _lifetime(tech)_
+   * - lifetime(tech)
      - [y]
      - Technology lifetime
-   * - _gwpconstr(tech)_
+   * - gwpconstr(tech)
      - [ktCO2-eq./GW]ab
      - Technology construction specific GHG emissions
-   * - _gwpop(res)_
+   * - gwpop(res)
      - [ktCO2-eq./GWh]
      - Specific GHG emissions of resources
-   * - _cp(tech)_
+   * - cp(tech)
      - [-]
      - Yearly capacity factor
-   * - _ηsto,in ; ηsto,out(sto; l)_
+   * - ηsto,in ; ηsto,out(sto; l)
      - [-]
      - Eficiency [0; 1] of storage input from/output to layer. Set to 0 if storage not related to layer.
-   * - _%stoloss(sto)_
+   * - %stoloss(sto)
      - [1/h]
      - Losses in storage (self discharge)
-   * - _tstoin(sto)_
+   * - tstoin(sto)
      - [-]
      - Time to charge storage (Energy to power ratio)
-   * - _tstoout(sto)_
+   * - tstoout(sto)
      - [-]
      - Time to charge storage (Energy to power ratio)
-   * - _%stoavail(sto)_
+   * - %stoavail(sto)
      - [-]
      - Storage technology availability to charge/discharge
-   * - _%netloss(eut)_
+   * - %netloss(eut)
      - [-]
      - Losses coeficient [0; 1] in the networks (grid and DHN)
-   * - _evBatt,size(v2g)_
+   * - evBatt,size(v2g)
      - [GWh]
      - Battery size per V2G car technology
-   * - _cgrid;extra_
+   * - cgrid;extra
      - [MCHF]
      - Cost to reinforce the grid due to IRE penetration
 
 
 
 a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
+
 b[GWh] if tech 2 STO
+
 c[Mpkm/h] for passenger, [Mtkm/h] for freight mobility end-uses
