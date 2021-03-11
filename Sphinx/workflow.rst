@@ -160,31 +160,37 @@ Step 1: selecting typical days
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Input**
+
 File STEP 1 in.xlsx loads the required data from the DATA.xlsx file, such as time series or number of typical days. The data required for STEP 1 MILP are generated in the .dat tab. User might copy-paste the tab in the data.dat file.
 
 **Run**
+
 Navigate to the subfolder .\STEP 1 TD selection folder via terminal/cmd prompt and execute (check glpsol documentation for more options):
 
-	Linux: glpsol -m TD main.mod -d data.dat
-	Mac OS X: glpsol -m TD main.mod -d data.dat
-	Windows: glpsol.exe -m TD main.mod -d data.dat
+	*Linux: glpsol -m TD main.mod -d data.dat
+	*Mac OS X: glpsol -m TD main.mod -d data.dat
+	*Windows: glpsol.exe -m TD main.mod -d data.dat
 
 **Output**
+
 Results of the computation are recorded in TD of days.out. It contains the sequence of TDs over the year. This data must be copied-pasted in file STEP 1 out.xlsx.
 
 Step 2: Energy model
 ^^^^^^^^^^^^^^^^^^^^
 
 **Input**
+
 File STEP 2 in.xlsx loads the required data from the DATA.xlsx and STEP 1 out.xlsx files. Then, required data are generated and must be copied-pasted. From the excel tabs ESTD data.dat and ESTD 12TD.dat to files ESTD data.dat and ESTD 12TD.dat, respectively. Here, we choose 12 typical days, but the STEP 1 out.xlsx file generates also files for 4, 8, 24, 48 and 365 typical days. File ESTD data.dat encompass all the information not related to typical days, such as technologies characterisations, resources prices and availability etc... File ESTD 12TDs.dat encompass the time series related to 12 typical days and the relation between TDs and days
 
 **Run**
+
 Navigate to the subfolder .nSTEP 2 Energy Model via terminal/cmd prompt and execute (check glpsol documentation for more options):
 
-	Linux : glpsol -m ESTD model.mod -d ESTD data.dat -d ESTD 12TD.dat -o ses main.out
-	Mac OS X : glpsol -m ESTD model.mod -d ESTD data.dat -d ESTD 12TD.dat -o ses main.out
-	Windows : glpsol.exe ESTD model.mod -d ESTD data.dat -d ESTD 12TD.dat -o ses main.out
+	*Linux : glpsol -m ESTD model.mod -d ESTD data.dat -d ESTD 12TD.dat -o ses main.out
+	*Mac OS X : glpsol -m ESTD model.mod -d ESTD data.dat -d ESTD 12TD.dat -o ses main.out
+	*Windows : glpsol.exe ESTD model.mod -d ESTD data.dat -d ESTD 12TD.dat -o ses main.out
 
 **Output**
+
 Output files are generated automatically in folder ./output.
 .. _README.md:
