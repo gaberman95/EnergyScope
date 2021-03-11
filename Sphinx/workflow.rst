@@ -3,6 +3,8 @@
 Getting Started
 ===============
 
+τcom
+
 The code, its documentation and the case study are gathered on a GitHub repository1. In the index and the README.md file is summarise how to launch the energy model in four steps. Here below, we propose an extensive explanation including how to compute the typical days and manage data. The data are managed through excel files which are related ones to each others. The models are coded in AMPL, using the solver CPLEX. However, the energy model proposed can be run using the open-source GLPK and the GLPSOL solver.
 
 
@@ -116,13 +118,12 @@ Figure 13: Files and folder structure
       	List of contributions and references
       	License file
    * - Data
-     -   
-     	DATA.xlsx
+     -  DATA.xlsx
       	STEP_1_in.xlsx
       	STEP_1_out.xlsx
       	STEP_2_in.xlsx
      -   
-     	All the input data
+		All the input data
       	Prepare data for step 1
       	Process data from step 1
       	Prepare data for step 2
