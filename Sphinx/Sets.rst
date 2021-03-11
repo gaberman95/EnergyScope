@@ -142,9 +142,7 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
 
 
 a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
-
 b[GWh] if tech ϵ STO
-
 c[Mpkm/h] for passenger, [Mtkm/h] for freight mobility end-uses
 
 
@@ -179,23 +177,22 @@ c[Mpkm/h] for passenger, [Mtkm/h] for freight mobility end-uses
    * - %MobPass(TECH OF EUC(MobPass))
      - [-]
      - Constant share of passengers mobility
-   * - %HeatDec(TECH OF EUT((HeatLowTDEC)\{DecSolar})
+   * - %HeatDec(TECH OF EUT((HeatLowTDEC) \ {DecSolar})
      - [-]
      - Constant share of Heat low T decentralised supplied by a technology plus its associated thermal solar and storage
-   * - Fsol(TECH OF EUT((HeatLowTDEC)\{DecSolar})
+   * - Fsol(TECH OF EUT((HeatLowTDEC) \ {DecSolar})
      - [GW]
      - Solar thermal installed capacity associated to a decentralised heating technology
-   * - Ftsol(TECH OF EUT((HeatLowTDEC)\{DecSolar})
+   * - Ftsol(TECH OF EUT((HeatLowTDEC) \ {DecSolar})
      - [GW]
      - Solar thermal operation in each period
      
 
 a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
-
 b[GWh] if tech ϵ STO
 
 
-.. list-table::Table 4: Dependent variable list with description. All variables are continuous and non-negative, unless otherwise indicated.
+.. list-table:: Table 4: Dependent variable list with description. All variables are continuous and non-negative, unless otherwise indicated.
    :widths: 25 15 50
    :header-rows: 1
 
