@@ -143,6 +143,92 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
 
 a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
 
-b[GWh] if tech 2 STO
+b[GWh] if tech ϵ STO
 
 c[Mpkm/h] for passenger, [Mtkm/h] for freight mobility end-uses
+
+
+.. list-table:: Table 3: Independent variable list with description. All variables are continuous and nonnegative, unless otherwise indicated.
+   :widths: 25 15 50
+   :header-rows: 1
+
+   * - Variable
+     - Units
+     - Description
+   * - %Public
+     - [-]
+     - Ratio [0; 1] public mobility over total passenger mobility
+   * - %Rail
+     - [-]
+     - Ratio [0; 1] rail transport over total freight transport
+   * - %DHN
+     - [-]
+     - Ratio [0; 1] centralized over total low-temperature heat
+   * - F(tech)
+     - [GW]ab
+     - Installed capacity with respect to main output
+   * - Ft(tech U res,h,td)
+     - [GW]ab
+     - Operation in each period
+   * - Stoin; Stoout(sto,l,h,td)
+     - [GW]
+     - Input to/output from storage units
+   * - PNuc
+     - [GW]
+     - Constant load of nuclear
+   * - %MobPass(TECH OF EUC(MobPass))
+     - [-]
+     - Constant share of passengers mobility
+   * - %HeatDec(TECH OF EUT((HeatLowTDEC)\{DecSolar})
+     - [-]
+     - Constant share of Heat low T decentralised supplied by a technology plus its associated thermal solar and storage
+   * - Fsol(TECH OF EUT((HeatLowTDEC)\{DecSolar})
+     - [GW]
+     - Solar thermal installed capacity associated to a decentralised heating technology
+   * - Ftsol(TECH OF EUT((HeatLowTDEC)\{DecSolar})
+     - [GW]
+     - Solar thermal operation in each period
+     
+
+a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
+
+b[GWh] if tech ϵ STO
+
+
+.. list-table::Table 4: Dependent variable list with description. All variables are continuous and non-negative, unless otherwise indicated.
+   :widths: 25 15 50
+   :header-rows: 1
+
+   * - Variable
+     - Units
+     - Description
+   * - EndUses(l,h,td)
+     - [GW]a 
+     - End-uses demand. Set to 0 if l ∉ EUT
+   * - Ctot
+     - [MCHF/y]
+     - Total annual cost of the energy system
+   * - Cmaint(tech)
+     - [MCHF/y]
+     - Technology yearly maintenance cost
+   * - Cop(res)
+     - [MCHF/y]
+     - Total cost of resources
+   * - GWPtot
+     - [ktCO2-eq./y]
+     - Total yearly GHG emlissions of the energy system
+   * - GWPconstr(tech)
+     - [ktCO2-eq.]
+     - Technology construction GHG emissions
+   * - GWPop(res)
+     - [ktCO2-eq./y]
+     - Total GHG emissions of resources
+   * - Netloss(eut,h,td)
+     - [GW]
+     - Losses in the networks (grid and DHN)
+   * - Stolevel(sto,t)
+     - [GWh]
+     - Energy stored over the year
+
+
+a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
