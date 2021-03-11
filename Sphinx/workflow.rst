@@ -108,11 +108,14 @@ Figure 13: Files and folder structure
      - File name
      - Description
    * - EnergyScope TD
-     -  '/'READ.md
-      	Notice license
-     -  Read me file
-      	List of contributions and references
-      	License file
+     -  
+     		README.md
+      		Notice 
+      		License
+     -  
+     		Read me file
+      		List of contributions and references
+      		License file
    * - Data
      -  DATA.xlsx
       	STEP_1_in.xlsx
