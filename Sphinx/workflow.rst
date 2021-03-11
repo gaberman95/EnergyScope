@@ -165,9 +165,9 @@ File STEP 1 in.xlsx loads the required data from the DATA.xlsx file, such as tim
 **Run**
 Navigate to the subfolder .\STEP 1 TD selection folder via terminal/cmd prompt and execute (check glpsol documentation for more options):
 
-	 Linux: glpsol -m TD main.mod -d data.dat
-	 Mac OS X: glpsol -m TD main.mod -d data.dat
-	 Windows: glpsol.exe -m TD main.mod -d data.dat
+	Linux: glpsol -m TD main.mod -d data.dat
+	Mac OS X: glpsol -m TD main.mod -d data.dat
+	Windows: glpsol.exe -m TD main.mod -d data.dat
 
 **Output**
 Results of the computation are recorded in TD of days.out. It contains the sequence of TDs over the year. This data must be copied-pasted in file STEP 1 out.xlsx.
@@ -181,9 +181,9 @@ File STEP 2 in.xlsx loads the required data from the DATA.xlsx and STEP 1 out.xl
 **Run**
 Navigate to the subfolder .nSTEP 2 Energy Model via terminal/cmd prompt and execute (check glpsol documentation for more options):
 
-	 Linux : glpsol -m ESTD model.mod -d ESTD data.dat -d ESTD 12TD.dat -o ses main.out
-	 Mac OS X : glpsol -m ESTD model.mod -d ESTD data.dat -d ESTD 12TD.dat -o ses main.out
-	 Windows : glpsol.exe ESTD model.mod -d ESTD data.dat -d ESTD 12TD.dat -o ses main.out
+	Linux : glpsol -m ESTD model.mod -d ESTD data.dat -d ESTD 12TD.dat -o ses main.out
+	Mac OS X : glpsol -m ESTD model.mod -d ESTD data.dat -d ESTD 12TD.dat -o ses main.out
+	Windows : glpsol.exe ESTD model.mod -d ESTD data.dat -d ESTD 12TD.dat -o ses main.out
 
 **Output**
 Output files are generated automatically in folder ./output.
