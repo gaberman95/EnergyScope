@@ -30,7 +30,7 @@ The objective Eq. (1) is the minimisation of the total annual cost of the energy
 	min  \mathbf{C_{tot}} = \sum_{j\in TECH}^{} (\tau (j)\mathbf{C_{inv}}(j) + \mathbf{C_{maint}}(j)) + \sum_{i \in RES}^{} \mathbf{C_{op}}(i)	(1)
 
 .. math::
-	s.t \tau (j) = \frac{i_{rate}*(i_{rate}+1)^{lifetime(j))}}{(i_{rate}+1)^{lifetime(j)-1)}}\; \; \; \forall j \in TECH	(2)
+	s.t \; \; \;\tau (j) = \frac{i_{rate}*(i_{rate}+1)^{lifetime(j))}}{(i_{rate}+1)^{lifetime(j)-1)}}\; \; \; \forall j \in TECH	(2)
 
 .. math::
 	\mathbf{C_{inv}}(j) = c_{inv}(j)*\mathbf{F}(j)\; \; \; \forall j \in TECH (3)
@@ -39,8 +39,41 @@ The objective Eq. (1) is the minimisation of the total annual cost of the energy
 	\mathbf{C_{maint}}(j) = c_{maint}(j)*\mathbf{F}(j)\; \; \; \forall j \in TECH (4)
 
 .. math::
-	\mathbf{C_{op}}(i)=\sum_{t\epsilon T\mid \left \{h,td  \right \}\in  T_H_D(t)}^{} c_{op}(i)*\mathbf{F_{t}}(i,h,td)t_{op}(h,td)\; \; \; \forall i \in RES (5)
+	\mathbf{C_{op}}(i)=\sum_{t\in T\mid \left \{h,td  \right \}\in  THTD(t)}^{} c_{op}(i)*\mathbf{F_{t}}(i,h,td)t_{op}(h,td)\; \; \; \forall i \in RES (5)
 
 
 The global annual greenhouse gas (GHG) emissions are calculated using a life cycle assessment (LCA) approach, i.e. taking into account emissions of technologies and resources \from cradle to grave". For climate change, the natural choice as indicator is the global warming potential (**GWP**), expressed in ktCO2-eq./year. In Eq. (6), the total yearly emissions of the system (GWPtot) are defined as the sum of the emissions related to the construction and end-of-life of the energy conversion technologies (**GWPconstr**), allocated to one year based on the technology lifetime (*lifetime*), and the emissions related to resources (**GWPop**). Similarly to the costs, the total emissions related to the construction of technologies are the product of the specific emissions (*gwpconstr*) and the installed size (**F**), Eq. (7). The total emissions of resources are the emissions associated to fuels (from cradle to combustion) and imports of electricity (*gwpop*) multiplied by the period duration (*top*) (Eq 8).
 
+.. math::
+	\mathbf{GWP_{tot}}= \sum_{j\in TECH}^{}\frac{\mathbf{GWP_{constr}}(j)} {lifetime(j))} +\sum_{i\in RES}^{} \mathbf{GWP_{op}}(i) (6)
+
+.. math::
+	\mathbf{GWP_{constr}}(j)=gwp_{constr}(j)\mathbf{F}(j)\; \; \; \forall j\in TECH (7)
+
+.. math::
+	\mathbf{GWP_{op}}(i)=\sum_{t\in \mid T\left \{ h,td \right \}\in THTD(t))}^{} gwp_{op}(i)\mathbf{F_{t}}(i,h,td)t_{op}(h,td)\; \; \; \forall i\in RES (8)
+
+System design and operation
+---------------------------
+
+The installed capacity of technologies (**F**) is constrained between upper and lower bounds (*fmax* and *fmin*), Eq. (9). This formulation allows accounting for old technologies still existing in the target year (lower bound), but also for the maximum deployment potential of a technology. As an example, for hydroelectric power plants, *fmin* represents the existing installed capacity (which will still be available in the future), while *fmax* represents the maximum potential.
+
+.. math::
+	f_{min}(j)\leq \mathbf{F}(j)\leq f_{max}(j)\; \; \; \forall j\in TECH (9)
+
+
+The operation of resources and technologies in each period is determined by the decision variable **Ft**. The capacity factor of technologies is conceptually divided into two components: a capacity factor for each period (*cp,t*) depending on resource availability (e.g. renewables) and a yearly capacity factor (*cp*) accounting for technology downtime and maintenance. For a given technology, the definition of only one of these two is needed, the other one being fixed to the default value of 1. Eqs. (10) and (11) link the installed size of a technology to its actual use in each period (Ft) via the two capacity factors. The total use of resources is limited by the yearly availability (*avail*), Eq. (12).
+
+.. math::
+	\mathbf{F_{t}}(j,h,td)\leq \mathbf{F}(j)c_{p,t}(j,h,td)\; \; \; \forall j\in TECH, \forall h\in H,\forall td\in TD (10)
+
+.. math:: 
+	\sum_{t\in T\mid \left \{h,td  \right \}\in  THTD(t)}^{}\mathbf{F_{t}}(j,h,td)t_{op}(h,td)\leq \mathbf{F}(j)c_{p}(j)\sum_{t\in T\mid \left \{h,td  \right \}\in  THTD(t)}^{}t_{op}(h,td)\; \; \; \forall j\in TECH (11)
+
+.. math::
+	\sum_{t\in T\mid \left \{h,td  \right \}\in  THTD(t)}^{}\mathbf{F_{t}}(i,h,td)t_{op}(h,td)\leq avail(i) \; \; \; \forall i\in RES (12)
+
+The matrix *f* defines for all technologies and resources outputs to (positive) and inputs (negative) layers. Eq. (13) expresses the balance for each layer: all outputs from resources and technologies (including storage) are used to satisfy the EUD or as inputs to other resources and technologies.	
+
+.. math::
+	\sum_{i\in RES \cup TECH\setminus STO}^{}f(i,l)\mathbf{F_{t}}(i,h,td) +\sum_{j\in STO}^{} (\mathbf{STO_{out}}(j,l,h,td)-\mathbf{STO_{in}}(j,l,h,td))-\mathbf{EndUses}(l,h,td)=0\; \; \; \forall l\in L,\forall h\in H,\forall td\in TD (13)
