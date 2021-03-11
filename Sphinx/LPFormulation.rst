@@ -77,3 +77,29 @@ The matrix *f* defines for all technologies and resources outputs to (positive) 
 
 .. math::
 	\sum_{i\in RES \cup TECH\setminus STO}^{}f(i,l)\mathbf{F_{t}}(i,h,td) +\sum_{j\in STO}^{} (\mathbf{STO_{out}}(j,l,h,td)-\mathbf{STO_{in}}(j,l,h,td))-\mathbf{EndUses}(l,h,td)=0\; \; \; \forall l\in L,\forall h\in H,\forall td\in TD (13)
+
+Storage
+-------
+
+The storage level (**Stolevel**) at a time step (*t*) is equal to the storage level at *t*-1 (accounting for the losses in *t*-1), plus the inputs to the storage, minus the output from the storage (accounting for input/output efficiencies (14) ). The storage systems which can only be used for short-term (daily) applications are included in the STO DAILY set. For these units, Eq. (15) imposes that the storage level be the same at the end of each typical day. Adding this constraint drastically reduces the computational time. For the other storage technologies, which can also be used for seasonal storage, the capacity is bounded by Eq (16). For these units, the storage behaviour is thus optimized over 8760h, as explained in the methodology Section of the paper.
+
+.. math::
+	\mathbf{Sto_{level}}(j,t)= \mathbf{Sto_{level}}(j,t-1)\cdot (1-%_{sto_{loss}}(j))+ t_{op}(h,td)\cdot (\sum_{l\in L\mid \eta _{sto,in(j,l)> 0)}}^{}\mathbf{Sto_{in}}(j,l,h,td)\eta _{sto,in}(j,l)-\sum_{l\in L\mid \eta _{sto,out(j,l)> 0)}}^{}\mathbf{Sto_{out}}(j,l,h,td)\eta _{sto,out}(j,l))\; \; \; \forall j\in STO, \forall t\in T\mid \left \{ h,td \right \}\in THTD(t) (14)
+
+.. math::
+	\mathbf{Sto_{level}}(j,t)=\mathbf{F_{t}}(j,h,td)\; \; \; \forall j\in STO DAILY, \forall t\in T\mid \left \{ h,td \right \}\in THTD(t) (15)
+
+.. math::
+	\mathbf{Sto_{level}}(j,t)=\mathbf{F}(j)\; \; \; \forall j\in STO \setminus STO DAILY, \forall t\in T (16)
+
+Eqs. (17)-(18) force the power input and output to zero if the layer is incompatible. As an example, a PHS will only be linked to the electricity layer (input/output efficiencies > 0). All other efficiencies will be equal to 0, to impede that the PHS exchanges with incompatible layers (e.g. mobility, heat, etc). Eq. (19) limits the power input/output of a storage technology based on its installed capacity (**F**) and three specific characteristics. First, storage availability (*%stoavail*) is defined as the ratio between the available storage capacity and the total installed capacity (default value is 1). This parameter is required to realistically represent V2G, for which we assume that only a fraction of the fleet can charge/discharge at the same time. Second and third, the charging/discharging time (*tstoin , tstoout* ), which are the time to complete a full charge/discharge from empty/full storage5. As an example, a daily thermal storage can be fully discharged in minimum 4 hours (*tstoout* = 4[h]), and fully charged in maximum 4 hours (*tstoin* = 4[h]).
+
+.. math::
+	\mathbf{Sto_{in}}(j,l,h,td)\cdot (\left \lceil \eta _{sto,in}(j,l) \right \rceil -1)=0\; \; \; \forall j\in STO,\forall l\in L,\forall h\in H, \forall td\in TD (17)
+
+.. math::
+	\mathbf{Sto_{out}}(j,l,h,td)\cdot (\left \lceil \eta _{sto,out}(j,l) \right \rceil -1)=0\; \; \; \forall j\in STO,\forall l\in L,\forall h\in H, \forall td\in TD (18)
+
+.. math::
+	(\mathbf{Sto_{in}}(j,l,h,td)t_{sto_{in}}(j)-\mathbf{Sto_{out}}(j,l,h,td)t_{sto_{out}}(j))\leq \mathbf{F}(j)%_{sto_{avail}}(j)\; \; \; \forall j\in STO,\forall l\in L,\forall h\in H, \forall td\in TD (19)
+
