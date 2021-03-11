@@ -27,4 +27,16 @@ The objective Eq. (1) is the minimisation of the total annual cost of the energy
 
 
 .. math::
-	min  \mathbf{C_{tot}} = \sum_{}^{j\epsilon TECH} (\tau (j)\mathbf{C_{inv}}(j) + \mathbf{C_{maint}}(j)) + \sum_{i \epsilon RES}^{} \mathbf{C_{op}}(i)	(1)
+	min  \mathbf{C_{tot}} = \sum_{j\in TECH}^{} (\tau (j)\mathbf{C_{inv}}(j) + \mathbf{C_{maint}}(j)) + \sum_{i \in RES}^{} \mathbf{C_{op}}(i)	(1)
+
+	s.t \tau (j) = \frac{i_{rate}*(i_{rate}+1)^{lifetime(j))}}{(i_{rate}+1)^{lifetime(j)-1)}}\; \; \; \forall j \in TECH	(2)
+
+	\mathbf{C_{inv}}(j) = c_{inv}(j)*\mathbf{F}(j)\; \; \; \forall j \in TECH (3)
+
+	\mathbf{C_{maint}}(j) = c_{maint}(j)*\mathbf{F}(j)\; \; \; \forall j \in TECH (4)
+
+	\mathbf{C_{op}}(i)=\sum_{t\epsilon T\mid \left \{h,td  \right \}\in  T_H_D(t)}^{} c_{op}(i)*\mathbf{F_{t}}(i,h,td)t_{op}(h,td)\; \; \; \forall i \in RES (5)
+
+
+The global annual greenhouse gas (GHG) emissions are calculated using a life cycle assessment (LCA) approach, i.e. taking into account emissions of technologies and resources \from cradle to grave". For climate change, the natural choice as indicator is the global warming potential (**GWP**), expressed in ktCO2-eq./year. In Eq. (6), the total yearly emissions of the system (GWPtot) are defined as the sum of the emissions related to the construction and end-of-life of the energy conversion technologies (**GWPconstr**), allocated to one year based on the technology lifetime (*lifetime*), and the emissions related to resources (**GWPop**). Similarly to the costs, the total emissions related to the construction of technologies are the product of the specific emissions (*gwpconstr*) and the installed size (**F**), Eq. (7). The total emissions of resources are the emissions associated to fuels (from cradle to combustion) and imports of electricity (*gwpop*) multiplied by the period duration (*top*) (Eq 8).
+
