@@ -135,6 +135,7 @@ Contents
    introduction
    LP
    Sets
+   LPFormulation
    workflow
 
 
