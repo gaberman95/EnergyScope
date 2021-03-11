@@ -1,7 +1,7 @@
 .. _LPFormulation:
 
-Linear Programming model formulation
-====================================
+Model formulation
+=================
 
 The energy system is formulated as a linear programming (LP) problem. It optimises the design by computing the installed capacity of each technology, as well as the operation in each period, to meet the energy demand and minimize the total annual cost of the system. In the following, we present the complete formulation of the model. It accounts for sets, parameters, variables, constraints and the objective function. The model formulation is expressed by the equations in Figure 4 and Eqs. (1)-(42).
 
@@ -27,4 +27,4 @@ The objective Eq. (1) is the minimisation of the total annual cost of the energy
 
 
 .. math::
-	10_{6}		(1)
+	min  \mathbf{C_{tot}} = \sum_{}^{j\epsilon TECH} (\tau (j)\mathbf{C_{inv}}(j) + \mathbf{C_{maint}}(j)) + \sum_{i \epsilon RES}^{} \mathbf{C_{op}}(i)	(1)
