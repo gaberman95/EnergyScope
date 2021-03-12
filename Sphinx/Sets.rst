@@ -230,4 +230,4 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
 
 * a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
 
-Since Pythagoras, we know that F\ :sub:'t'\ (j)
+Since Pythagoras, we know that F\ :sub:`t`\ (j)
