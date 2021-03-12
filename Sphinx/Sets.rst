@@ -20,19 +20,19 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
    * - Parameter
      - Units
      - Description
-   * - %elec(h,td)
+   * - %\ :sub:`elec`\ (h,td)
      - [-]
      - Yearly time series (adding up to 1) of electricity end-uses
-   * - %sh(h,td)
+   * - %\ :sub:`sh`\ (h,td)
      - [-]
      - Yearly time series (adding up to 1) of SH end-uses
-   * - %pass(h,td)
+   * - %\ :sub:`pass`\ (h,td)
      - [-]
      - Yearly time series (adding up to 1) of passenger mobility end-uses
-   * - %fr(h,td)
+   * - %\ :sub:`fr`\ (h,td)
      - [-]
      - Yearly time series (adding up to 1) of freight mobility end-uses
-   * - cp,t(tech,h,td)
+   * - c\ :sub:`p,t`\ (tech,h,td)
      - [-]
      - Period capacity factor (default 1)
 
@@ -230,4 +230,3 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
 
 * a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
 
-Since Pythagoras, we know that F\ :sub:`t`\ (j)
