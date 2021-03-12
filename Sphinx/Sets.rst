@@ -48,94 +48,94 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
    * - τ(tech)
      - [-]
      - Investment cost annualization factor
-   * - irate
+   * - i\ :sub:`rate`\ 
      - [-]
      - Real discount rate
-   * - endUsesyear(eui, s)
-     - [GWh/y]a
+   * - endUses\ :sub:`year`\ (eui, s)
+     - [GWh/y]\ :sup:`a`\ 
      - Annual end-uses in energy services per sector
    * - endUsesInput(eui)_
-     - [GWh/y]a
+     - [GWh/y]\ :sup:`a`\ 
      - Total annual end-uses in energy services
-   * - reshare
+   * - re\ :sub:`share`\ 
      - [-]
      - minimum share [0;1] of primary RE
-   * - gwplimit
-     - [ktCO2-eq/y]
-     - Higher CO2-eq emissions limit
-   * - %public,min; %public,max
+   * - gwp\ :sub:`limit`\ 
+     - [ktCO\ :sub:`2-eq`\ /y]
+     - Higher CO\ :sub:`2-eq`\  emissions limit
+   * - %\ :sub:`public,min`\ ; %\ :sub:`public,max`\ 
      - [-] 
-     - Lower and upper limit to %Public
-   * - %rail,min; %rail,max
+     - Lower and upper limit to %\ :sub:`Public`\ 
+   * - %\ :sub:`rail,min`\ ; %\ :sub:`rail,max`\ 
      - [-]
-     - Lower and upper limit to %Rail
-   * - %dhn,min; %dhn,max
+     - Lower and upper limit to %\ :sub:`Rail`\ 
+   * - %\ :sub:`dhn,min`\ ; %\ :sub:`dhn,max`\ 
      - [-] 
-     - Lower and upper limit to %DHN
-   * - top(h; td)
+     - Lower and upper limit to %\ :sub:`DHN`\ 
+   * - t\ :sub:`op`\ (h; td)
      - [h]
      - Time periods duration (default 1h)
-   * - fmin; fmax(tech)
-     - [GW]ab
+   * - f\ :sub:`min`\ ; f\ :sub:`max`\ (tech)
+     - [GW]\ :sup:`ab`\ 
      - Min./max. installed size of the technology
-   * - fmin,% ; fmax,%(tech)
+   * - f\ :sub:`min,%`\  ; f\ :sub:`max,%`\ (tech)
      - [-]
      - Min./max. relative share of a technology in a layer
    * - avail(res)
      - [GWh/y]
      - Resource yearly total availability
-   * - cop(res)
+   * - c\ :sub:`op`\ (res)
      - [MCHF/GWh] 
      - Specific cost of resources
-   * - ηcar,max
+   * - η\ :sub:`car,max`\ 
      - [-]
      - Maximum number of cars
-   * - %Peaksh 
+   * - %\ :sub:`Peak\ :sub:`sh`\ `\  
      - [-]
      - Ratio peak/max. space heating demand in typical days
    * - f(res U tech \ sto,l)
-     - [GW]c 
-     - Input from (< 0) or output to (> 0) layers. f(i; j) = 1
-   * - cinv(tech)
-     - [MCHF/GW]cb
+     - [GW]\ :sup:`c`\ 
+     - Input from (< 0) or output to (> 0) layers. *f(i; j) = 1* if *j* is main output layer for technology/resource *i*
+   * - c\ :sub:`inv`\ (tech)
+     - [MCHF/GW]\ :sup:`cb`\ 
      - Technology specific investment cost
-   * - cmaint(tech)
-     - [MCHF/GW/y]cb
+   * - c\ :sub:`maint`\ (tech)
+     - [MCHF/GW/y]\ :sup:`cb`\ 
      - Technology specific yearly maintenance cost
    * - lifetime(tech)
      - [y]
      - Technology lifetime
-   * - gwpconstr(tech)
-     - [ktCO2-eq./GW]ab
+   * - gwp\ :sub:`constr`\ (tech)
+     - [ktCO\ :sub:`2-eq`\ ./GW]\ :sup:`ab`\ 
      - Technology construction specific GHG emissions
-   * - gwpop(res)
-     - [ktCO2-eq./GWh]
+   * - gwp\ :sub:`op`\ (res)
+     - [ktCO\ :sub:`2-eq`\ ./GWh]
      - Specific GHG emissions of resources
-   * - cp(tech)
+   * - c\ :sub:`p`\ (tech)
      - [-]
      - Yearly capacity factor
-   * - ηsto,in ; ηsto,out(sto; l)
+   * - η\ :sub:`sto,in`\ ; η\ :sub:`sto,out`\ (sto; l)
      - [-]
      - Eficiency [0; 1] of storage input from/output to layer. Set to 0 if storage not related to layer.
-   * - %stoloss(sto)
+   * - %\ :sub:`sto\ :sub:`loss`\ `\ (sto)
      - [1/h]
      - Losses in storage (self discharge)
-   * - tstoin(sto)
+   * - t\ :sub:`sto\ :sub:`in`\ `\ (sto)
      - [-]
      - Time to charge storage (Energy to power ratio)
-   * - tstoout(sto)
+   * - t\ :sub:`sto\ :sub:`out`\ `\ (sto)
      - [-]
      - Time to charge storage (Energy to power ratio)
-   * - %stoavail(sto)
+   * - %\ :sub:`sto\ :sub:`avail`\ `\ (sto)
      - [-]
      - Storage technology availability to charge/discharge
-   * - %netloss(eut)
+   * - %\ :sub:`net\ :sub:`loss`\ `\ (eut)
      - [-]
      - Losses coeficient [0; 1] in the networks (grid and DHN)
-   * - evBatt,size(v2g)
+   * - ev\ :sub:`Batt,size`\ (v2g)
      - [GWh]
      - Battery size per V2G car technology
-   * - cgrid;extra
+   * - c\ :sub:`grid,extra`\ 
      - [MCHF]
      - Cost to reinforce the grid due to IRE penetration
 
