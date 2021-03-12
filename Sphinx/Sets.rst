@@ -202,7 +202,7 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
    * - EndUses(l,h,td)
      - [GW]a 
      - End-uses demand. Set to 0 if l ∉ EUT
-   * - C_{tot}
+   * - Ctot
      - [MCHF/y]
      - Total annual cost of the energy system
    * - Cmaint(tech)
@@ -229,3 +229,5 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
 
 
 * a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
+
+: math: C_{top}
