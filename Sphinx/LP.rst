@@ -30,6 +30,6 @@ Figure 2: Representation of the Elec layer with all the technologies implemented
 
 References
 ----------
-.. [1] T. Hurlimann.\LPL: A mathematical programming language". In: OR Spektrum 15.1 (1993), pp. 43{55. issn: 01716468. doi: 10.1007/BF01783416. url: https://doi.org/10.1007/BF01783416
+.. [1] T. Hürlimann.\LPL: A mathematical programming language". In: OR Spektrum 15.1 (1993), pp. 43{55. issn: 01716468. doi: 10.1007/BF01783416. url: https://doi.org/10.1007/BF01783416
 .. [2] European Commission - Eurostat. Glossary: Final Energy Consumption. (Visited on 12/14/2018).
 .. [3] Freepik. url: www.flaticon.com

@@ -65,7 +65,7 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
      - Higher CO\ :sub:`2-eq`\  emissions limit
    * - %\ :sub:`public,min`\ ; %\ :sub:`public,max`\ 
      - [-] 
-     - Lower and upper limit to **%\ :sub:`Public`\ ** 
+     - Lower and upper limit to %\ :sub:`Public`\  
    * - %\ :sub:`rail,min`\ ; %\ :sub:`rail,max`\ 
      - [-]
      - Lower and upper limit to %\ :sub:`Rail`\ 
