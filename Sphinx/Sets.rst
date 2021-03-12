@@ -39,7 +39,7 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
 
 
 .. list-table:: Table 2: Scenario parameter list with description.
-   :widths: 25 15 50
+   :widths: 25 18 50
    :header-rows: 1
 
    * - Parameter
@@ -65,7 +65,7 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
      - Higher CO\ :sub:`2-eq`\  emissions limit
    * - %\ :sub:`public,min`\ ; %\ :sub:`public,max`\ 
      - [-] 
-     - Lower and upper limit to %\ :sub:`Public`\ 
+     - Lower and upper limit to **%\ :sub:`Public`\ ** 
    * - %\ :sub:`rail,min`\ ; %\ :sub:`rail,max`\ 
      - [-]
      - Lower and upper limit to %\ :sub:`Rail`\ 
@@ -90,7 +90,7 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
    * - η\ :sub:`car,max`\ 
      - [-]
      - Maximum number of cars
-   * - %\ :sub:`Peak\ :sub:`sh`\ `\  
+   * - %\ :sub:`Peaksh`\  
      - [-]
      - Ratio peak/max. space heating demand in typical days
    * - f(res U tech \ sto,l)
@@ -117,19 +117,19 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
    * - η\ :sub:`sto,in`\ ; η\ :sub:`sto,out`\ (sto; l)
      - [-]
      - Eficiency [0; 1] of storage input from/output to layer. Set to 0 if storage not related to layer.
-   * - %\ :sub:`sto\ :sub:`loss`\ `\ (sto)
+   * - %\ :sub:`sto,loss`\ (sto)
      - [1/h]
      - Losses in storage (self discharge)
-   * - t\ :sub:`sto\ :sub:`in`\ `\ (sto)
+   * - t\ :sub:`sto,in`\ (sto)
      - [-]
      - Time to charge storage (Energy to power ratio)
-   * - t\ :sub:`sto\ :sub:`out`\ `\ (sto)
+   * - t\ :sub:`sto,out`\ `\ (sto)
      - [-]
      - Time to charge storage (Energy to power ratio)
-   * - %\ :sub:`sto\ :sub:`avail`\ `\ (sto)
+   * - %\ :sub:`sto,avail`\ (sto)
      - [-]
      - Storage technology availability to charge/discharge
-   * - %\ :sub:`net\ :sub:`loss`\ `\ (eut)
+   * - %\ :sub:`net,loss`\ (eut)
      - [-]
      - Losses coeficient [0; 1] in the networks (grid and DHN)
    * - ev\ :sub:`Batt,size`\ (v2g)
@@ -142,88 +142,91 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
 
 
 * a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses
-* b[GWh] if tech ϵ STO
+* b[GWh] if *tech* ϵ STO
 * c[Mpkm/h] for passenger, [Mtkm/h] for freight mobility end-uses
 
 
 .. list-table:: Table 3: Independent variable list with description. All variables are continuous and nonnegative, unless otherwise indicated.
-   :widths: 25 15 50
+   :widths: 25 18 50
    :header-rows: 1
 
    * - Variable
      - Units
      - Description
-   * - %Public
+   * - %\ :sub:`Public`\ 
      - [-]
      - Ratio [0; 1] public mobility over total passenger mobility
-   * - %Rail
+   * - %\ :sub:`Rail`\ 
      - [-]
      - Ratio [0; 1] rail transport over total freight transport
-   * - %DHN
+   * - %\ :sub:`DHN`\ 
      - [-]
      - Ratio [0; 1] centralized over total low-temperature heat
    * - F(tech)
-     - [GW]ab
+     - [GW]\ :sup:`ab`\ 
      - Installed capacity with respect to main output
-   * - Ft(tech U res,h,td)
-     - [GW]ab
+   * - F\ :sub:`t`\ (tech U res,h,td)
+     - [GW]\ :sup:`ab`\ 
      - Operation in each period
-   * - Stoin; Stoout(sto,l,h,td)
+   * - Sto\ :sub:`in`\ ; Sto\ :sub:`out`\ (sto,l,h,td)
      - [GW]
      - Input to/output from storage units
-   * - PNuc
+   * - P\ :sub:`Nuc`\ 
      - [GW]
      - Constant load of nuclear
-   * - %MobPass(TECH OF EUC(MobPass))
+   * - %\ :sub:`MobPass`\ (TECH OF EUC(MobPass))
      - [-]
      - Constant share of passengers mobility
-   * - %HeatDec(TECH OF EUT((HeatLowTDEC) \ {DecSolar})
+   * - %\ :sub:`HeatDec`\ HeatDec(TECH OF EUT((HeatLowTDEC) \ {DecSolar})
      - [-]
      - Constant share of Heat low T decentralised supplied by a technology plus its associated thermal solar and storage
-   * - Fsol(TECH OF EUT((HeatLowTDEC) \ {DecSolar})
+   * - F\ :sub:`sol`\ (TECH OF EUT((HeatLowTDEC) \ {DecSolar})
      - [GW]
      - Solar thermal installed capacity associated to a decentralised heating technology
-   * - Ftsol(TECH OF EUT((HeatLowTDEC) \ {DecSolar})
+   * - F\ :sub:`tsol`\ (TECH OF EUT((HeatLowTDEC) \ {DecSolar})
      - [GW]
      - Solar thermal operation in each period
      
 
 * a[Mpkm] (millions of passenger-km) for passenger, [Mtkm] (millions of ton-km) for freight mobility end-uses 
-* b[GWh] if tech ϵ STO
+* b[GWh] if *tech* ϵ STO
 
 
 .. list-table:: Table 4: Dependent variable list with description. All variables are continuous and non-negative, unless otherwise indicated.
-   :widths: 25 15 50
+   :widths: 25 18 50
    :header-rows: 1
 
    * - Variable
      - Units
      - Description
    * - EndUses(l,h,td)
-     - [GW]a 
+     - [GW]\ :sup:`a`\  
      - End-uses demand. Set to 0 if l ∉ EUT
-   * - Ctot
+   * - C\ :sub:`tot`\ 
      - [MCHF/y]
      - Total annual cost of the energy system
-   * - Cmaint(tech)
+   * - C\ :sub:`inv`\ 
+     - [MCHF]
+     - Technology total investment cost
+   * - C\ :sub:`maint`\ (tech)
      - [MCHF/y]
      - Technology yearly maintenance cost
-   * - Cop(res)
+   * - C\ :sub:`op`\ (res)
      - [MCHF/y]
      - Total cost of resources
-   * - GWPtot
-     - [ktCO2-eq./y]
+   * - GWP\ :sub:`tot`\ 
+     - [ktCO\ :sub:`2-eq`\ ./y]
      - Total yearly GHG emlissions of the energy system
-   * - GWPconstr(tech)
-     - [ktCO2-eq.]
+   * - GWP\ :sub:`constr`\ (tech)
+     - [ktCO\ :sub:`2-eq`\ .]
      - Technology construction GHG emissions
-   * - GWPop(res)
-     - [ktCO2-eq./y]
+   * - GWP\ :sub:`op`\ (res)
+     - [ktCO\ :sub:`2-eq`\ ./y]
      - Total GHG emissions of resources
-   * - Netloss(eut,h,td)
+   * - Net\ :sub:`loss`\ (eut,h,td)
      - [GW]
      - Losses in the networks (grid and DHN)
-   * - Stolevel(sto,t)
+   * - Sto\ :sub:`level`\ (sto,t)
      - [GWh]
      - Energy stored over the year
 
