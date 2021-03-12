@@ -202,7 +202,7 @@ Figure 3: Visual representation of the sets and indices of the LP framework. Abb
    * - EndUses(l,h,td)
      - [GW]a 
      - End-uses demand. Set to 0 if l ∉ EUT
-   * - Ctot
+   * - C_{tot}
      - [MCHF/y]
      - Total annual cost of the energy system
    * - Cmaint(tech)

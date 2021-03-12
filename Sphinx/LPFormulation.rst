@@ -6,7 +6,7 @@ Model formulation
 The energy system is formulated as a linear programming (LP) problem. It optimises the design by computing the installed capacity of each technology, as well as the operation in each period, to meet the energy demand and minimize the total annual cost of the system. In the following, we present the complete formulation of the model. It accounts for sets, parameters, variables, constraints and the objective function. The model formulation is expressed by the equations in Figure 4 and Eqs. (1)-(42).
 
 End-use demand
---------------
+^^^^^^^^^^^^^^
 
 We use the end-use demand (EUD) instead of the final energy consumption (FEC) to characterise the demand. According to the definition of the European commission, FEC is defined as *"the energy which reaches the final consumer's door"* [3]_. In other words, the FEC is the amount of input fuel needed to satisfy the EUD in energy services. As an example, in the case of decentralized heat production with a gas boiler, the FEC is the amount of NG consumed by the boiler; the EUD is the amount of heat produced by the boiler, i.e. the heating service needed by the final user. This modelling choice has two advantages. First, it introduces a clear distinction between demand and supply. On the one hand, the demand concerns the definition of the end-uses, i.e. the requirements in energy services (e.g. the mobility needs). On the other hand, the supply concerns the choice of the energy conversion technologies to supply these services (e.g. the types of vehicles used to satisfy the mobility needs). Based on the technology choice, the same EUD can be satisfied with different FEC, depending on the efficiency of the chosen energy conversion technology. Second, it facilitates the inclusion in the model of electric technologies for heating and transportation.
 The hourly end-use demand (**EndUses**) is computed based on the yearly end-use demand (*endUsesInput*), distributed according to a normalised time series.
@@ -21,7 +21,7 @@ The percentage repartition between centralized (DHN) and decentralized heat dema
 
 
 Cost, emissions and objective function
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The objective Eq. (1) is the minimisation of the total annual cost of the energy system (**Ctot**), defined as the sum of the annualized investment cost of technologies (τ **Cinv**), the operating and maintenance cost of technologies (**Cmaint**) and the operating cost of the resources (**Cop**). The total investment cost (Cinv) of each technology results from the multiplication of its specific investment cost (*cinv*) and its installed size (F), the latter defined with respect to the main end-uses output type Eq. (3). Cinv is annualised with the factor τ , calculated based on the interest rate (*irate*) and the technology lifetime (*lifetime*) Eq. (2). The total operation and maintenance cost is calculated in the same way Eq. (4). The total cost of the resources is calculated as the sum of the end-use over different periods multiplied by the period duration (*top*) and the specific cost of the resource (*cop*) Eq. (5). Note that, in Eq. (5), summing over the typical days using the set T_H_TD is equivalent to summing over the 8760h of the year.
 
@@ -54,7 +54,7 @@ The global annual greenhouse gas (GHG) emissions are calculated using a life cyc
 	\mathbf{GWP_{op}}(i)=\sum_{t\in \mid T\left \{ h,td \right \}\in THTD(t))}^{} gwp_{op}(i)\mathbf{F_{t}}(i,h,td)t_{op}(h,td)\; \; \; \forall i\in RES (8)
 
 System design and operation
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The installed capacity of technologies (**F**) is constrained between upper and lower bounds (*fmax* and *fmin*), Eq. (9). This formulation allows accounting for old technologies still existing in the target year (lower bound), but also for the maximum deployment potential of a technology. As an example, for hydroelectric power plants, *fmin* represents the existing installed capacity (which will still be available in the future), while *fmax* represents the maximum potential.
 
@@ -79,7 +79,7 @@ The matrix *f* defines for all technologies and resources outputs to (positive) 
 	\sum_{i\in RES \cup TECH\setminus STO}^{}f(i,l)\mathbf{F_{t}}(i,h,td) +\sum_{j\in STO}^{} (\mathbf{STO_{out}}(j,l,h,td)-\mathbf{STO_{in}}(j,l,h,td))-\mathbf{EndUses}(l,h,td)=0\; \; \; \forall l\in L,\forall h\in H,\forall td\in TD (13)
 
 Storage
--------
+^^^^^^^
 
 The storage level (**Stolevel**) at a time step (*t*) is equal to the storage level at *t*-1 (accounting for the losses in *t*-1), plus the inputs to the storage, minus the output from the storage (accounting for input/output efficiencies (14) ). The storage systems which can only be used for short-term (daily) applications are included in the STO DAILY set. For these units, Eq. (15) imposes that the storage level be the same at the end of each typical day. Adding this constraint drastically reduces the computational time. For the other storage technologies, which can also be used for seasonal storage, the capacity is bounded by Eq (16). For these units, the storage behaviour is thus optimized over 8760h, as explained in the methodology Section of the paper.
 
