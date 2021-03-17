@@ -84,7 +84,7 @@ Storage
 The storage level (Sto\ :sub:`level`\ ) at a time step (*t*) is equal to the storage level at *t*-1 (accounting for the losses in *t*-1), plus the inputs to the storage, minus the output from the storage (accounting for input/output efficiencies (14) ). The storage systems which can only be used for short-term (daily) applications are included in the STO DAILY set. For these units, Eq. (15) imposes that the storage level be the same at the end of each typical day. Adding this constraint drastically reduces the computational time. For the other storage technologies, which can also be used for seasonal storage, the capacity is bounded by Eq (16). For these units, the storage behaviour is thus optimized over 8760h, as explained in the methodology Section of the paper.
 
 .. math::
-	\mathbf{Sto_{level}}(j,t)= \mathbf{Sto_{level}}(j,t-1)\cdot (1-%_{sto_{loss}}(j))+ t_{op}(h,td)\cdot (\sum_{l\in L\mid \eta _{sto,in(j,l)> 0)}}^{}\mathbf{Sto_{in}}(j,l,h,td)\eta _{sto,in}(j,l)- \sum_{l\in L\mid \eta _{sto,out(j,l)> 0)}}^{}\mathbf{Sto_{out}}(j,l,h,td)\eta _{sto,out}(j,l))\; \; \; \forall j\in STO, \forall t\in T\mid \left \{ h,td \right \}\in THTD(t) (14)
+	\mathbf{Sto_{level}}(j,t)= \mathbf{Sto_{level}}(j,t-1)\cdot (1 - %_{sto_{loss}}(j))+ t_{op}(h,td)\cdot (\sum_{l\in L\mid \eta _{sto,in(j,l)> 0)}}^{}\mathbf{Sto_{in}}(j,l,h,td)\eta _{sto,in}(j,l)- \sum_{l\in L\mid \eta _{sto,out(j,l)> 0)}}^{}\mathbf{Sto_{out}}(j,l,h,td)\eta _{sto,out}(j,l))\; \; \; \forall j\in STO, \forall t\in T\mid \left \{ h,td \right \}\in THTD(t) (14)
 
 .. math::
 	\mathbf{Sto_{level}}(j,t)=\mathbf{F_{t}}(j,h,td)\; \; \; \forall j\in STO DAILY, \forall t\in T\mid \left \{ h,td \right \}\in THTD(t) (15)
