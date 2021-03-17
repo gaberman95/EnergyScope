@@ -186,7 +186,7 @@ Eq. (33) forces batteries of electric vehicle to supply, at least, the energy re
 .. math::
 	\mathbf{Sto_{out}}(i,Elec,h,td)\geq -f(j,Elec)\mathbf{F_{t}}(j,h,td)\; \; \; \forall j\in V2G,\forall i\in  EVs\: BATT \: OF \: V2G(j), \forall h\in H,\forall td\in TD(33)
 
-.. image:: images/
+.. image:: images/V2G.PNG
 
 Figure 7: Illustrativee example of a V2G implementation. The battery can interact with the electricity layer. The V2G takes the electricity from the battery to provide a constant share (%\ :sub:`MobPass`\ ) of the passenger mobility layer (*Mob. Pass*.).
 
