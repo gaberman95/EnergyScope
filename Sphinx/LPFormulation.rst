@@ -209,7 +209,7 @@ Additional constraints are required to implement the scenarios and the Swiss hyd
 
 
 .. math::
-	\mathbf{GWP_{tot}}\leq gwp_{limit}(36)
+	\mathbf{GWP_{tot}}\leq gwp_{limit}(36) 
 
 .. math::
 	\sum_{j\in RES_{re},t\in T\mid \left \{ h,td \right \}\in THTD(t)}^{}\mathbf{F_{t}}(j,h,td)\cdot t_{op}(h,td)\geq re_{share}\sum_{j\in RES,t\in T\mid \left \{ h,td \right \}\in THTD(t)}^{}\mathbf{F_{t}}(j,h,td)\cdot t_{op}(h,td)(37)
