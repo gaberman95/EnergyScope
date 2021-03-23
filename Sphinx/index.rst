@@ -136,6 +136,7 @@ Contents
    LP
    Sets
    LPFormulation
+   Swiss
    workflow
 
 
