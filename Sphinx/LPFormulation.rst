@@ -84,7 +84,7 @@ Storage
 The storage level (Sto\ :sub:`level`\ ) at a time step (*t*) is equal to the storage level at *t*-1 (accounting for the losses in *t*-1), plus the inputs to the storage, minus the output from the storage (accounting for input/output efficiencies (14) ). The storage systems which can only be used for short-term (daily) applications are included in the STO DAILY set. For these units, Eq. (15) imposes that the storage level be the same at the end of each typical day. Adding this constraint drastically reduces the computational time. For the other storage technologies, which can also be used for seasonal storage, the capacity is bounded by Eq (16). For these units, the storage behaviour is thus optimized over 8760h, as explained in the methodology Section of the paper.
 
 .. math::
-	\mathbf{Sto_{level}}(j,t)= \mathbf{Sto_{level}}(j,t-1)\cdot (1 - %_{sto_{loss}}(j))+ t_{op}(h,td)\cdot (\sum_{l\in L\mid \eta _{sto,in(j,l)> 0)}}^{}\mathbf{Sto_{in}}(j,l,h,td)\eta _{sto,in}(j,l)- \sum_{l\in L\mid \eta _{sto,out(j,l)> 0)}}^{}\mathbf{Sto_{out}}(j,l,h,td)\eta _{sto,out}(j,l))\; \; \; \forall j\in STO, \forall t\in T\mid \left \{ h,td \right \}\in THTD(t) (14)
+	\mathbf{Sto_{level}}(j,t)= \mathbf{Sto_{level}}(j,t-1)\cdot (1- %_{sto_{loss}}(j)) + t_{op}(h,td) \cdot (\sum_{l\in L\mid \eta _{sto,in(j,l)> 0)}}^{} \mathbf{Sto_{in}}(j,l,h,td)\eta _{sto,in}(j,l)- \sum_{l\in L \mid \eta _{sto,out(j,l)> 0)}}^{}\mathbf{Sto_{out}}(j,l,h,td)\eta _{sto,out}(j,l))\; \; \; \forall j\in STO, \forall t\in T\mid \left \{ h,td \right \} \in THTD(t) (14)
 
 .. math::
 	\mathbf{Sto_{level}}(j,t)=\mathbf{F_{t}}(j,h,td)\; \; \; \forall j\in STO DAILY, \forall t\in T\mid \left \{ h,td \right \}\in THTD(t) (15)
@@ -101,7 +101,7 @@ Eqs. (17)-(18) force the power input and output to zero if the layer is incompat
 	\mathbf{Sto_{out}}(j,l,h,td)\cdot (\left \lceil \eta _{sto,out}(j,l) \right \rceil -1)=0\; \; \; \forall j\in STO,\forall l\in L,\forall h\in H, \forall td\in TD (18)
 
 .. math::
-	(\mathbf{Sto_{in}}(j,l,h,td)t_{sto_{in}}(j)-\mathbf{Sto_{out}}(j,l,h,td)t_{sto_{out}}(j))\leq \mathbf{F}(j)%_{sto_{avail}}(j)\; \; \; \forall j\in STO,\forall l\in L,\forall h\in H, \forall td\in TD (19)
+	(\mathbf{Sto_{in}}(j,l,h,td)t_{sto_{in}}(j)-\mathbf{Sto_{out}}(j,l,h,td)t_{sto_{out}}(j))\leq \mathbf{F}(j)%_{sto_{avail}}(j) \; \; \; \forall j\in STO,\forall l\in L,\forall h\in H, \forall td\in TD (19)
 
 
 Infrastructure
@@ -110,7 +110,7 @@ Infrastructure
 Eq. (20) calculates network losses as a share (%\ :sub:`net,loss`\ ) of the total energy transferred through the network. As an example, losses in the electricity grid are estimated to be 7% of the energy transferred6. Eqs. (21)-(23) define the extra investment for networks. Integration of intermittent renewable energies (iRE) implies an additional investment costs for the electricity grid (c\ :sub:`grid,extra`\ ). As an example, the needed investments are expected to be 2.5 billions CHF\ :sub:`2015`\  for the high voltage grid and 9.4 billions CHF\ :sub:`2015`\  for the medium and low voltage grid7. Eq. (22) links the size of DHN to the total size of the installed centralized energy conversion technologies. The power-to-gas storage data is implemented as in Al-musleh et al. [9]. It is implemented in the model with two conversion units and a liquified natural gas (LNG) storage tank. *PowerToGas*\ :sub:`in`\  converts electricity to LNG, *PowerToGas*\ :sub:`out`\  converts LNG back to electricity. The investment cost is associated to the PowerToGas unit, whose size is the maximum size of the two conversion units, Eq. (23) here displayed in a compact non-linear formulation.
 
 .. math::
-	\mathbf{Net_{loss}}(eut,h,td)=(\sum_{i\, \in\,  RES\cup TECH\setminus STO\: \mid f(i,eut)> 0)}^{}f(i,eut)\mathbf{F_{t}}(i,h,td))%_{net_{loss}}(eut)\; \; \; \forall eut=EUT,\forall h\in   H,\forall td\in TD (20)
+	\mathbf{Net_{loss}}(eut,h,td)=(\sum_{i \in\,  RES\cup TECH\setminus STO\: \mid f(i,eut)> 0}^{}f(i,eut)\mathbf{F_{t}}(i,h,td))%_{net_{loss}}(eut))\; \; \; \; \;  \forall eut=EUT,\forall h\in   H,\forall td\in TD (20)
 
 .. math::
 	\mathbf{F}(Grid)=\frac{c_{grid,extra}}{c_{inv}(Grid)}\cdot \frac{\mathbf{F}(Wind)+\mathbf{F}(PV)}{f_{max}(Wind)+f_{max}(PV)} (21)
