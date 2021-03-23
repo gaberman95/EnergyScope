@@ -8,7 +8,7 @@ For GHG emissions, LCA data are taken from the Ecoinvent database v3.2 [11] usin
 For the cost, the reported data are the nominal values for Switzerland in the year 2035. All costs are expressed in *real*  Swiss Francs for the year 2015 (\ :sub:`2015`\ ). All cost data used in the model originally expressed in other currencies or referring to another year are converted to CHF\ :sub:`2015`\  to offer a coherent comparison. The method used for the conversion is illustrated by Eq. 43.
 
 .. math::
-
+	c_{inv}\left [ CHF_{2015} \right ]=c_{inv}\left [ C_{y} \right ]\cdot \frac{USD_{y}}{C_{y}} \cdot \frac{CEPCI_{2015}\left [ USD_{2015} \right ]}{CEPCI_{y}\left [ USD_{y} \right ]}\cdot \frac{CHF_{2015}}{USD_{2015}}  (43)
 
 .. list-table:: Table 5: CEPCI values [12]
    :widths: 25 25
@@ -108,3 +108,52 @@ For both sectors, first the FEC is shared among the different technologies, then
 In the model, there is a repartition between low temperature and high temperature heating EUD. The first one includes EUD for space heating and hot water. The second one is the EUD for process heating. The services sector has only low temperature heating EUD, while the industry sector has both.
 
 Process heating and HW demand are considered constant over the year, whereas SH demand is shared over the year according to %\ :sub:`heating`\ , which is illustrated in Figure 8 (based on the data presented in Appendix D of [15]). Another illustration is Table 8 that summarises these data by aggregating the monthly heat demands.
+
+table7
+imagen
+
+.. list-table:: Table 8: Aggregated monthly distribution factors for SH demand (%heating) and varying electricity demand (%elec).
+   :widths: 7 7 7 7 7 7 7 7 7 7 7 7 7  
+   :header-rows: 2
+
+   * - Yearly share (adding up to 1) of space heating and electricity [-]
+   * -
+     - Jan.
+     - Feb.
+     - Mar.
+     - Apr.
+     - May
+     - Jun.
+     - Jul.
+     - Aug.
+     - Sep.
+     - Oct.
+     - Nov.
+     - Dec.
+   * - %\ :sub:`heating`\ 
+     - 0.179
+     - 0.168
+     - 0.138
+     - 0.064
+     - 0.036
+     - 0.010
+     - 0.007
+     - 0.010
+     - 0.029
+     - 0.078
+     - 0.111
+     - 0.170
+   * - %\ :sub:`elec`\ 
+     - 0.091
+     - 0.081
+     - 0.089
+     - 0.079
+     - 0.081
+     - 0.079
+     - 0.078
+     - 0.080
+     - 0.082
+     - 0.084
+     - 0.086
+     - 0.089
+    
