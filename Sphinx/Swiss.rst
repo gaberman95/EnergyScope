@@ -117,7 +117,7 @@ imagen
    :header-rows: 1
 
    * - Yearly share (adding up to 1) of space heating and electricity [-]
-   * -
+   * - Month
      - Jan.
      - Feb.
      - Mar.
