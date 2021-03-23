@@ -114,21 +114,9 @@ imagen
 
 .. list-table:: Table 8: Aggregated monthly distribution factors for SH demand (%heating) and varying electricity demand (%elec).
    :widths: 7 7 7 7 7 7 7 7 7 7 7 7 7  
-   :header-rows: 2
+   :header-rows: 1
 
-   * - Yearly
-     - share
-     - (adding
-     - up
-     - to
-     - 1)
-     - of
-     - space
-     - heating
-     - and
-     - electricity
-     - [-]
-     -
+   * - Yearly share (adding up to 1) of space heating and electricity [-]
    * -
      - Jan.
      - Feb.
