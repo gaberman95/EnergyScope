@@ -112,7 +112,7 @@ Process heating and HW demand are considered constant over the year, whereas SH 
 table7
 imagen
 
-.. list-table:: Table 8: Aggregated monthly distribution factors for SH demand (%heating) and varying electricity demand (%elec).
+.. list-table:: Table 8: Aggregated monthly distribution factors for SH demand (%\ :sub:`heating`\ ) and varying electricity demand (%\ :sub:`elec`\ ). Yearly share (adding up to 1) of space heating and electricity [-]
    :widths: 7 7 7 7 7 7 7 7 7 7 7 7 7  
    :header-rows: 1
 
@@ -156,3 +156,29 @@ imagen
      - 0.086
      - 0.089
     
+
+Electricity
+^^^^^^^^^^^
+The values in Table 9 list the electricity demand that is not related to heating for the three sectors in 2035. The values are taken from tables 9-11, 9-13, 9-15, 9-19 and 9-24 in [13]. The varying demand of electricity is shared over the year according to %\ :sub:`elec`\ , which is represented in Figure 9 (based on the data presented in Appendix D of [15]). Table 8 summarises these data by aggregating the monthly electricity demands.
+
+imagen
+tabla 9
+
+Mobility
+^^^^^^^^
+The annual passenger transport demand in Switzerland for 2035 is expected to be 146e09 passenger-kilometers (pkms) [13]. Passenger transport demand is divided between public andprivate transport. The lower (%\ :sub:`public,min`\ ) and upper bounds (%public,max) for the use of publictransport are 30% and 50% of the annual passenger transport demand, respectively. Thepassenger mobility demand is shared over the day according to %pass. We assume a constant passenger mobility demand for every day of the year. This latter is represented in Figure 10 (data from Figure 12 of [16]).
+The annual freight transport demand in Switzerland for 2035 is expected to be 40.0e09 tonkilometers (tkms). It is shared between road (trucks) and rail (train) freight transport [13].The lower (%\ :sub:`rail,min`\ ) and upper bounds %\ :sub:`rail,max`\ ) for the use of freight trains are 40% and 60% of the annual freight transport demand, respectively
+
+imagen 10
+
+Electricity production and hydro dams
+-------------------------------------
+
+Renewables
+^^^^^^^^^^
+
+tabla 10
+
+Data for the considered renewable electricity production technologies are listed in Table 10. In Table 10, the yearly capacity factor (c\ :sub:`p`\ ) is reported. As described in the methodology Section of the paper, for seasonal renewables the capacity factor c\ :sub:`p;t`\  is defined for each time period. These capacity factors are represented in Figure 11. For these technologies, c\ :sub:`p`\  is the average of c\ :sub:`p;t`\ . The hourly values are aggregated per month and reported in Table 11. For all the other electricity supply technologies (renewable and non-renewable), c\ :sub:`p;t`\  is equal to the default value of 1. 
+
+tabla 11
