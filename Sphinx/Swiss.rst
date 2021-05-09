@@ -247,6 +247,7 @@ supply technologies (renewable and non-renewable) c\ :sub:`p,t`\ is equal to the
 .. image:: images/swiss/table21.PNG
 .. image:: images/swiss/table22.PNG
 .. image:: images/swiss/table23.PNG
+
 .. image:: images/swiss/figura12.PNG
 
 Figure 12: Capacity factor of thermal solar panels over the year.
