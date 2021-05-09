@@ -134,7 +134,7 @@ Nuclear power plants are assumed to have no power variation over the year (24). 
 Eq. (25) imposes that the share of the different technologies for mobility (%\ :sub:`MobPass`\ ) be the same at each time step. In other words, if 20% of the mobility is supplied by train, this share remains constant in the morning or the afternoon. The addition of this constraint is motivated by the fact that the investment cost of passenger and freight transport technologies is not accounted for in the model (c\ :sub:`inv`\  = 0 for these technologies).
 
 .. math::
-	\mathbf{F_{t}}(j,h,td)=\mathbf{%_{MobPass}}(j)\sum_{l\in EUT\: of\: EUC(MobPass)}^{}\mathbf{EndUses}(l,h,td)\; \; \; \forall j \in TECH\: OF\: EUC(MobPass),\forall h \in H,\forall td \in TD (25)
+	\mathbf{F_{t}}(j,h,td)=\mathbf{\%_{MobPass}}(j)\sum_{l\in EUT\: of\: EUC(MobPass)}^{}\mathbf{EndUses}(l,h,td)\; \; \; \forall j \in TECH\: OF\: EUC(MobPass),\forall h \in H,\forall td \in TD (25)
 
 Decentralised heat production:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -217,7 +217,7 @@ Additional constraints are required to implement the scenarios and the Swiss hyd
 	\sum_{j\in RES_{re},t\in T\mid \left \{ h,td \right \}\in THTD(t)}^{}\mathbf{F_{t}}(j,h,td)\cdot t_{op}(h,td)\geq re_{share}\sum_{j\in RES,t\in T\mid \left \{ h,td \right \}\in THTD(t)}^{}\mathbf{F_{t}}(j,h,td)\cdot t_{op}(h,td)(37)
 
 .. math::
-	f_{min,%}(j)\sum_{{j}'\in TECH\: OF\:  EUT(eut),t\in T\mid \left \{ h,td \right \}\in THTD(t)}^{}\mathbf{F_{t}}({j}',h,td)\cdot t_{op}(h,td)\leq \sum_{t\in T\mid \left \{ h,td \right \}\in THTD(t)}^{}\mathbf{F_{t}}(j,h,td)\cdot t_{op}(h,td)\leq f_{max,%}(j)\sum_{{j}''\in TECH\: OF\:  EUT(eut),t\in T\mid \left \{ h,td \right \}\in THTD(t)}^{}\mathbf{F_{t}}({j}'',h,td)\cdot t_{op}(h,td)\; \; \; \; \; \;\forall eut\in EUT,\forall j\in TECH\: OF\:  EUT(eut) (38)
+	f_{min,\%}(j)\sum_{{j}'\in TECH\: OF\:  EUT(eut),t\in T\mid \left \{ h,td \right \}\in THTD(t)}^{}\mathbf{F_{t}}({j}',h,td)\cdot t_{op}(h,td)\leq \sum_{t\in T\mid \left \{ h,td \right \}\in THTD(t)}^{}\mathbf{F_{t}}(j,h,td)\cdot t_{op}(h,td)\leq f_{max,\%}(j)\sum_{{j}''\in TECH\: OF\:  EUT(eut),t\in T\mid \left \{ h,td \right \}\in THTD(t)}^{}\mathbf{F_{t}}({j}'',h,td)\cdot t_{op}(h,td)\; \; \; \; \; \;\forall eut\in EUT,\forall j\in TECH\: OF\:  EUT(eut) (38)
 
 .. math::
 	\mathbf{F}(Efficiency)=\frac{1}{1+i_{rate}} (39)
