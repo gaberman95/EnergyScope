@@ -103,7 +103,7 @@ Eqs. (17)-(18) force the power input and output to zero if the layer is incompat
 
 .. math::
 	(\mathbf{Sto_{in}}(j,l,h,td)t_{sto_{in}}(j)-\mathbf{Sto_{out}}(j,l,h,td)t_{sto_{out}}(j))\leq \mathbf{F}(j).
-	%_{sto_{avail}}(j) \; \; \; \forall j\in STO,\forall l\in L,\forall h\in H, \forall td\in TD (19)
+	\%_{sto_{avail}}(j) \; \; \; \forall j\in STO,\forall l\in L,\forall h\in H, \forall td\in TD (19)
 
 
 Infrastructure
@@ -112,7 +112,7 @@ Infrastructure
 Eq. (20) calculates network losses as a share (%\ :sub:`net,loss`\ ) of the total energy transferred through the network. As an example, losses in the electricity grid are estimated to be 7% of the energy transferred6. Eqs. (21)-(23) define the extra investment for networks. Integration of intermittent renewable energies (iRE) implies an additional investment costs for the electricity grid (c\ :sub:`grid,extra`\ ). As an example, the needed investments are expected to be 2.5 billions CHF\ :sub:`2015`\  for the high voltage grid and 9.4 billions CHF\ :sub:`2015`\  for the medium and low voltage grid7. Eq. (22) links the size of DHN to the total size of the installed centralized energy conversion technologies. The power-to-gas storage data is implemented as in Al-musleh et al. [9]. It is implemented in the model with two conversion units and a liquified natural gas (LNG) storage tank. *PowerToGas*\ :sub:`in`\  converts electricity to LNG, *PowerToGas*\ :sub:`out`\  converts LNG back to electricity. The investment cost is associated to the PowerToGas unit, whose size is the maximum size of the two conversion units, Eq. (23) here displayed in a compact non-linear formulation.
 
 .. math::
-	\mathbf{Net_{loss}}(eut,h,td)=(\sum_{i \in\,  RES\cup TECH\setminus STO\: \mid f(i,eut)> 0}^{}f(i,eut)\mathbf{F_{t}}(i,h,td)).%_{net_{loss}}(eut))\; \; \; \; \;  \forall eut=EUT,\forall h\in   H,\forall td\in TD (20)
+	\mathbf{Net_{loss}}(eut,h,td)=(\sum_{i \in\,  RES\cup TECH\setminus STO\: \mid f(i,eut)> 0}^{}f(i,eut)\mathbf{F_{t}}(i,h,td)).\%_{net_{loss}}(eut))\; \; \; \; \;  \forall eut=EUT,\forall h\in   H,\forall td\in TD (20)
 
 .. math::
 	\mathbf{F}(Grid)=\frac{c_{grid,extra}}{c_{inv}(Grid)}\cdot \frac{\mathbf{F}(Wind)+\mathbf{F}(PV)}{f_{max}(Wind)+f_{max}(PV)} (21)
@@ -150,7 +150,7 @@ Thermal solar is implemented as a decentralized technology. It is always install
 A thermal storage i is defined for each decentralised heating technology j, to which it is related via the set *TS OF DEC TECH*, i.e. *i=TS OF DEC TECH(j)*. Each thermal storage *i* can store heat from its technology *j* and the associated thermal solar Fsol(j ). Similarly to the passenger mobility, Eq. (28) makes the model more realistic by defining the operating strategy for decentralized heating. In fact, in the model we represent decentralized heat in an aggregated form; however, in a real case, residential heat cannot be aggregated obviously. A house heated by a decentralised gas boiler and solar thermal panels should not be able to be heated by the electrical heat pump and thermal storage of the neighbours, and vice-versa. Hence, Eq. (28) imposes that the use of each technology (F\ :sub:`t`\ (j; h; td)), plus its associated thermal solar (F\ :sub:`t,sol`\ (j; h; td)) plus its associated storage outputs (Sto\ :sub:`out`\ (i; l; h; td)) minus its associated storage inputs (Sto\ :sub:`in`\ (i; l; h; td)) should be a constant share (%\ :sub:`HeatDec`\ (j )) of the decentralised heat demand (**EndUses**(HeatLowT; h; td)). Figure 5 shows, through an example with two technologies (a gas boiler and a heat pump (HP)), how decentralised thermal storage and thermal solar are implemented.
 
 .. math::
-	\mathbf{F_{t}}(j,h,td)+\mathbf{F_{t_{sol}}}(j,h,td)+\sum_{l\in L}^{}(\mathbf{Sto_{out}}(i,l,h,td)-\mathbf{Sto_{in}}(i,l,h,td))=\mathbf{%_{HeatDec}}(j)\mathbf{EndUses}(HeatLowT,h,td)\; \; \; \; \; \forall j \in TECH \: OF \: EUT(HeatLowTDec)\setminus \left \{ Dec_{Solar} \right \},\forall i \in TS \: OF \: DEC\: TECH (j),\forall h \in H,\forall td \in TD (28)
+	\mathbf{F_{t}}(j,h,td)+\mathbf{F_{t_{sol}}}(j,h,td)+\sum_{l\in L}^{}(\mathbf{Sto_{out}}(i,l,h,td)-\mathbf{Sto_{in}}(i,l,h,td))=\mathbf{\%_{HeatDec}}(j)\mathbf{EndUses}(HeatLowT,h,td)\; \; \; \; \; \forall j \in TECH \: OF \: EUT(HeatLowTDec)\setminus \left \{ Dec_{Solar} \right \},\forall i \in TS \: OF \: DEC\: TECH (j),\forall h \in H,\forall td \in TD (28)
 
 .. image:: images/TSandFsol.PNG
 
@@ -183,7 +183,7 @@ covered by the type of vehicle j (%\ :sub:`MobPass`\ (j)) and the size of batter
 Eq. (33) forces batteries of electric vehicle to supply, at least, the energy required by each associated electric vehicle technology. This lower bound is not an equality; in fact, according to the V2G concept, batteries can also be used to support the grid. Figure 7 shows through an example with only battery electric vehicles (BEVs) how Eq. (33) simplifies the implementation of V2G. In this illustration, a battery technology is associated to a BEV. The battery can either supply the BEV needs or restore electricity to the grid.
 
 .. math::
-	\mathbf{F}(i)=\eta _{car,max}\mathbf{%_{MobPass}}(j)ev_{Batt,size}(j)\; \; \; \forall j\in V2G, \forall i\in  EVs\: BATT \: OF \: V2G(j) (32)
+	\mathbf{F}(i)=\eta _{car,max}.\mathbf{\%_{MobPass}}(j)ev_{Batt,size}(j)\; \; \; \forall j\in V2G, \forall i\in  EVs\: BATT \: OF \: V2G(j) (32)
 
 .. math::
 	\mathbf{Sto_{out}}(i,Elec,h,td)\geq -f(j,Elec)\mathbf{F_{t}}(j,h,td)\; \; \; \forall j\in V2G,\forall i\in  EVs\: BATT \: OF \: V2G(j), \forall h\in H, \forall td\in TD(33)
@@ -198,10 +198,10 @@ Peak demand:
 Finally, Eqs. (34)-(35) constrain the installed capacity of low temperature heat supply. Based on the selected typical days (TDs), the ratio between the yearly peak demand and the TDs peak demand is defined for space heating (%\ :sub:`Peak,sh`\  ). Eq. (34) imposes that the installed capacity for decentralised technologies covers the real peak over the year. Similarly, Eq. (35) forces the centralised heating system to have a supply capacity (production plus storage) higher than the peak demand.
 
 .. math::
-	\mathbf{F}(j)\geq  %_{Peak_{sh}} \underset{h\in H,td\in TD}{max}\left \{\mathbf{F_{t}}(j,h,td)  \right \} \; \; \; \forall j \in TECH \: OF \: EUT(HeatLowTDec)\setminus \left \{ Dec_{Solar} \right \} (34)
+	\mathbf{F}(j)\geq  \%_{Peak_{sh}} \underset{h\in H,td\in TD}{max}\left \{\mathbf{F_{t}}(j,h,td)  \right \} \; \; \; \forall j \in TECH \: OF \: EUT(HeatLowTDec)\setminus \left \{ Dec_{Solar} \right \} (34)
 
 .. math::
-	\sum_{j \in TECH \: OF \: EUT(HeatLowTDHN,i \in STO \: OF \: EUT(HeatLowTDHN)}^{}(\mathbf{F}(j)+\mathbf{F}(i) /t_{sto_{out}}(i,HeatLowTDHN)) \geq  %_{Peak_{sh}}\underset{h\in H,td\in TD}{max}\left \{ \mathbf{EndUses}(HeatLowTDHN,h,td) \right \} (35)
+	\sum_{j \in TECH \: OF \: EUT(HeatLowTDHN,i \in STO \: OF \: EUT(HeatLowTDHN)}^{}(\mathbf{F}(j)+\mathbf{F}(i) /t_{sto_{out}}(i,HeatLowTDHN)) \geq  \%_{Peak_{sh}}\underset{h\in H,td\in TD}{max}\left \{ \mathbf{EndUses}(HeatLowTDHN,h,td) \right \} (35)
 
 
 
