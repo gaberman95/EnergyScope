@@ -102,7 +102,8 @@ Eqs. (17)-(18) force the power input and output to zero if the layer is incompat
 	\mathbf{Sto_{out}}(j,l,h,td)\cdot (\left \lceil \eta _{sto,out}(j,l) \right \rceil -1)=0\; \; \; \forall j\in STO,\forall l\in L,\forall h\in H, \forall td\in TD (18)
 
 .. math::
-	(\mathbf{Sto_{in}}(j,l,h,td)t_{sto_{in}}(j)-\mathbf{Sto_{out}}(j,l,h,td)t_{sto_{out}}(j))\leq \mathbf{F}(j).%_{sto_{avail}}(j) \; \; \; \forall j\in STO,\forall l\in L,\forall h\in H, \forall td\in TD (19)
+	(\mathbf{Sto_{in}}(j,l,h,td)t_{sto_{in}}(j)-\mathbf{Sto_{out}}(j,l,h,td)t_{sto_{out}}(j))\leq \mathbf{F}(j).
+	%_{sto_{avail}}(j) \; \; \; \forall j\in STO,\forall l\in L,\forall h\in H, \forall td\in TD (19)
 
 
 Infrastructure
